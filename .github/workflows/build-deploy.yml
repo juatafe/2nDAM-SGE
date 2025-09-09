@@ -1,0 +1,124 @@
+name: Build & Deploy Sphinx (HTML + PDF)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+# Necessitem WRITE per a fer push a gh-pages
+permissions:
+  contents: write
+  packages: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  check-image:
+    runs-on: ubuntu-latest
+    outputs:
+      has_image: ${{ steps.out.outputs.has_image }}
+      dockerfile_changed: ${{ steps.diff.outputs.dockerfile_changed }}
+      needs_build: ${{ steps.compute.outputs.needs_build }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check if image exists on GHCR
+        id: out
+        run: |
+          if docker manifest inspect ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/sphinx-latex:latest > /dev/null 2>&1; then
+            echo "has_image=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_image=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Detect Dockerfile change
+        id: diff
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            dockerfile:
+              - '.ci/Dockerfile'
+
+      - name: Compute need to build
+        id: compute
+        run: |
+          NEEDS_BUILD=false
+          if [ "${{ steps.out.outputs.has_image }}" != "true" ]; then NEEDS_BUILD=true; fi
+          if [ "${{ steps.diff.outputs.dockerfile }}" = "true" ]; then NEEDS_BUILD=true; fi
+          echo "needs_build=$NEEDS_BUILD" >> "$GITHUB_OUTPUT"
+
+  build-container:
+    needs: check-image
+    if: needs.check-image.outputs.needs_build == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: .ci/Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/sphinx-latex:latest
+
+  build-deploy:
+    needs: [check-image, build-container]
+    if: ${{ always() && (needs.check-image.outputs.needs_build == 'false' || needs.build-container.result == 'success') }}
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/${{ github.repository_owner }}/sphinx-latex:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # (Opcional) deps extra
+      - name: Install extra Python deps
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
+
+      - name: Build HTML
+        run: sphinx-build -b html docs docs/_build/html
+
+      - name: Build PDF (latexpdf) and copy to site/pdf (slug)
+        run: |
+            sphinx-build -M latexpdf docs docs/_build
+
+            REPO_NAME="${GITHUB_REPOSITORY##*/}"
+            SITE_SLUG="${REPO_NAME:-site}"
+
+            mkdir -p docs/_build/html/pdf
+
+            # Sphinx ja genera ${SITE_SLUG}.pdf perquè ho hem definit en latex_documents
+            PDF_PATH="docs/_build/latex/${SITE_SLUG}.pdf"
+            if [ ! -f "$PDF_PATH" ]; then
+            # fallback per si algun dia canvia el nom
+            PDF_PATH="$(ls -1 docs/_build/latex/*.pdf | head -n1)"
+            fi
+
+            cp "$PDF_PATH" "docs/_build/html/pdf/${SITE_SLUG}.pdf"
+            ls -l docs/_build/html/pdf/
+
+
+      - name: Disable Jekyll
+        run: echo > docs/_build/html/.nojekyll
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs/_build/html
+          # force_orphan: true  # (opcional) crea història neta
