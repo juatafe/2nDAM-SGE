@@ -1,40 +1,29 @@
-# Plantilla Sphinx (HTML + PDF)
+# Introducció a Odoo i als sistemes ERP-CRM
 
-Benvinguda! Esta és la portada de la plantilla. Baix tens una vista ràpida i enllaços útils.
+Els **sistemes ERP (Enterprise Resource Planning)** són programes de gestió empresarial integrada.  
+Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, inventari, vendes, producció, recursos humans i atenció ciutadana.  
 
-```{grid} 1 1 2 2
-:gutter: 2
+👉 En el cas d’una empresa, això ajuda a:
+- Evitar duplicitat de dades.  
+- Reduir errors humans.  
+- Facilitar la presa de decisions amb dades en temps real.  
+- Millorar la coordinació entre departaments.  
 
-:::{card} Guia ràpida
-:link: guia-rapida
-**Comandes** i flux bàsic per a treballar en local i publicar.
-:::
+Els ERP poden ser **propietaris** (com SAP, Dynamics, Sage) o **lliures** (com Odoo, Dolibarr).  
 
-:::{card} Personalització
-:link: personalitzacio
-Canvia tema, logo, CSS i opcions del `conf.py`.
-:::
+Un cas molt interessant és **Odoo**, que destaca per:
+- Cost inicial baix (Community gratis, Enterprise amb subscripció).  
+- Arquitectura modular i escalable.  
+- Interfície moderna i fàcil d’usar.  
+- Gran comunitat de desenvolupadors i mòduls.  
 
-:::{card} Duplicar amb un script
-:link: duplicar-plantilla
-Com usar `scripts/nou_sphinx_repo.sh` per a clonar i personalitzar.
-:::
-```
-
-
-## Estat del projecte
-- Tema: **pydata-sphinx-theme**
-- PDF: es publica en `pdf/<slug>.pdf` i apareix com a icona a la barra superior.
-- Build & Deploy: automàtic via **GitHub Actions** → `gh-pages`.
-
-
-
+Per això en aquest mòdul utilitzarem **Odoo Community 16** com a referència.
 
 ```{toctree}
-:hidden:
 :maxdepth: 2
+:caption: Continguts
 
-guia-rapida
-personalitzacio
-duplicar-plantilla
+situacio
+informe
 ```
+
