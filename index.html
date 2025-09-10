@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introducció a Odoo i als sistemes ERP-CRM &#8212; Sistemes de Gestió Empresarial</title>
+    <title>Unitat 1. Identificació de sistemes ERP/CRM &#8212; Sistemes de Gestió Empresarial</title>
   
   
   
@@ -41,7 +41,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=b75b09d5"></script>
+    <script src="_static/documentation_options.js?v=f6d0a247"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -50,6 +50,7 @@
     <script src="_static/translations.js?v=5e30842e"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="canonical" href="https://juatafe.github.io/2nDAM-SGE/index.html" />
     <link rel="icon" href="_static/logo50.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
@@ -144,6 +145,10 @@
   
   
 
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="Continguts de la pàgina">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
   
 </div>
 
@@ -380,7 +385,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -391,11 +398,31 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introducció a Odoo i als sistemes ERP-CRM</h1>
+    <h1>Unitat 1. Identificació de sistemes ERP/CRM</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp-crm">Introducció a Odoo i als sistemes ERP-CRM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-gestio-empresarial-quins-objectius-te">1. Què és la gestió empresarial? Quins objectius té?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa">2. Què entens per ERP i què gestiona en una empresa?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-un-crm">3. Què és un CRM?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriu-larquitectura-mvc-dodoo">4. Descriu l’arquitectura MVC d’Odoo.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explica-les-diferents-formes-dinstallar-un-erp-quina-utilitzarem-nosaltres">5. Explica les diferents formes d’instal·lar un ERP. Quina utilitzarem nosaltres?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entenem-per-modul-base-quins-components-en-formen-part-en-odoo">6. Què entenem per mòdul base? Quins components en formen part en Odoo?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomena-els-tipus-de-moduls-que-podem-installar-en-un-erp-i-com-es-relacionen">7. Nomena els tipus de mòduls que podem instal·lar en un ERP i com es relacionen.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-que-es-important-la-localitzacio-del-pais-en-un-erp">8. Per què és important la localització del país en un ERP?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#script-per-retardar-la-publicacio">Script per retardar la publicació</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -405,10 +432,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introduccio-a-odoo-i-als-sistemes-erp-crm">
-<h1>Introducció a Odoo i als sistemes ERP-CRM<a class="headerlink" href="#introduccio-a-odoo-i-als-sistemes-erp-crm" title="Enllaça amb aquesta capçalera">#</a></h1>
-<p>Els <strong>sistemes ERP (Enterprise Resource Planning)</strong> són programes de gestió empresarial integrada.<br />
-Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, inventari, vendes, producció, recursos humans i atenció ciutadana.</p>
+  <section id="unitat-1-identificacio-de-sistemes-erp-crm">
+<h1>Unitat 1. Identificació de sistemes ERP/CRM<a class="headerlink" href="#unitat-1-identificacio-de-sistemes-erp-crm" title="Enllaça amb aquesta capçalera">#</a></h1>
+<section id="introduccio-a-odoo-i-als-sistemes-erp-crm">
+<h2>Introducció a Odoo i als sistemes ERP-CRM<a class="headerlink" href="#introduccio-a-odoo-i-als-sistemes-erp-crm" title="Enllaça amb aquesta capçalera">#</a></h2>
+<p>Els sistemes <strong>ERP (Enterprise Resource Planning)</strong> són programes de gestió empresarial integrada.
+Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, inventari, vendes, producció,
+recursos humans i atenció ciutadana.</p>
 <p>👉 En el cas d’una empresa, això ajuda a:</p>
 <ul class="simple">
 <li><p>Evitar duplicitat de dades.</p></li>
@@ -416,7 +446,7 @@ Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, i
 <li><p>Facilitar la presa de decisions amb dades en temps real.</p></li>
 <li><p>Millorar la coordinació entre departaments.</p></li>
 </ul>
-<p>Els ERP poden ser <strong>propietaris</strong> (com SAP, Dynamics, Sage) o <strong>lliures</strong> (com Odoo, Dolibarr).</p>
+<p>Els ERP poden ser <strong>propietaris</strong> (SAP, Dynamics, Sage) o <strong>lliures</strong> (Odoo, Dolibarr).</p>
 <p>Un cas molt interessant és <strong>Odoo</strong>, que destaca per:</p>
 <ul class="simple">
 <li><p>Cost inicial baix (Community gratis, Enterprise amb subscripció).</p></li>
@@ -425,7 +455,148 @@ Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, i
 <li><p>Gran comunitat de desenvolupadors i mòduls.</p></li>
 </ul>
 <p>Per això en aquest mòdul utilitzarem <strong>Odoo Community 16</strong> com a referència.</p>
-<div class="toctree-wrapper compound">
+</section>
+<hr class="docutils" />
+<section id="exercicis">
+<h2>Exercicis<a class="headerlink" href="#exercicis" title="Enllaça amb aquesta capçalera">#</a></h2>
+<section id="que-es-la-gestio-empresarial-quins-objectius-te">
+<h3>1. Què és la gestió empresarial? Quins objectius té?<a class="headerlink" href="#que-es-la-gestio-empresarial-quins-objectius-te" title="Enllaça amb aquesta capçalera">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">La gestió empresarial és l’habilitat per organitzar, controlar i dirigir una empresa o
+organització per assolir els objectius proposats.<br />
+<strong>Objectius principals:</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Planificació</p></li>
+<li><p class="sd-card-text">Organització</p></li>
+<li><p class="sd-card-text">Direcció</p></li>
+<li><p class="sd-card-text">Control</p></li>
+<li><p class="sd-card-text">Dotació de personal</p></li>
+<li><p class="sd-card-text">Coordinació</p></li>
+</ul>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="que-entens-per-erp-i-que-gestiona-en-una-empresa">
+<h3>2. Què entens per ERP i què gestiona en una empresa?<a class="headerlink" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa" title="Enllaça amb aquesta capçalera">#</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_ERP_software_packages">Fes un resum de paquets ERP</a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Un ERP integra processos empresarials (producció, vendes, distribució, compres, finances).</p>
+<p class="sd-card-text"><strong>Exemples destacats:</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Apache OFBiz (Java, open source, llicència Apache 2.0).</p></li>
+<li><p class="sd-card-text">Kuali (educació superior, llicència AGPL).</p></li>
+<li><p class="sd-card-text">Openbravo (Java + PostgreSQL, punt de venda).</p></li>
+<li><p class="sd-card-text">Odoo (Python, modular, comunitari LGPL i enterprise propietària).</p></li>
+</ul>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="que-es-un-crm">
+<h3>3. Què és un CRM?<a class="headerlink" href="#que-es-un-crm" title="Enllaça amb aquesta capçalera">#</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_CRM_systems">Fes un resum de sistemes CRM</a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Un CRM és un sistema per gestionar la relació amb els clients.<br />
+<strong>Exemples:</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Capsule CRM (SaaS, Java, MySQL).</p></li>
+<li><p class="sd-card-text">SugarCRM (PHP, multiplataforma, BD variades).</p></li>
+<li><p class="sd-card-text">Base CRM (Ruby on Rails, apps mòbils, MySQL).</p></li>
+</ul>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="descriu-larquitectura-mvc-dodoo">
+<h3>4. Descriu l’arquitectura MVC d’Odoo.<a class="headerlink" href="#descriu-larquitectura-mvc-dodoo" title="Enllaça amb aquesta capçalera">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Odoo utilitza l’arquitectura <strong>Model–Vista–Controlador</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Model:</strong> dades en taules PostgreSQL (ORM).</p></li>
+<li><p class="sd-card-text"><strong>Vista:</strong> interfície definida amb XML.</p></li>
+<li><p class="sd-card-text"><strong>Controlador:</strong> objectes en Python que gestionen la lògica.</p></li>
+</ul>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="explica-les-diferents-formes-dinstallar-un-erp-quina-utilitzarem-nosaltres">
+<h3>5. Explica les diferents formes d’instal·lar un ERP. Quina utilitzarem nosaltres?<a class="headerlink" href="#explica-les-diferents-formes-dinstallar-un-erp-quina-utilitzarem-nosaltres" title="Enllaça amb aquesta capçalera">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Instal·lació en màquina virtual.</p></li>
+<li><p class="sd-card-text">Instal·lació amb paquets gràfics.</p></li>
+<li><p class="sd-card-text">Instal·lació personalitzada des de codi font.</p></li>
+<li><p class="sd-card-text">Accés online (SaaS).</p></li>
+</ul>
+<p class="sd-card-text">Nosaltres treballarem amb <strong>màquina virtual + personalitzada</strong>.</p>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="que-entenem-per-modul-base-quins-components-en-formen-part-en-odoo">
+<h3>6. Què entenem per mòdul base? Quins components en formen part en Odoo?<a class="headerlink" href="#que-entenem-per-modul-base-quins-components-en-formen-part-en-odoo" title="Enllaça amb aquesta capçalera">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">El mòdul base és el conjunt mínim per a què funcione Odoo.<br />
+Inclou:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Mòdul <strong>Empreses</strong> (fitxes de clients).</p></li>
+<li><p class="sd-card-text">Mòdul <strong>Administració</strong> (seguretat i configuració bàsica).</p></li>
+</ul>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="nomena-els-tipus-de-moduls-que-podem-installar-en-un-erp-i-com-es-relacionen">
+<h3>7. Nomena els tipus de mòduls que podem instal·lar en un ERP i com es relacionen.<a class="headerlink" href="#nomena-els-tipus-de-moduls-que-podem-installar-en-un-erp-i-com-es-relacionen" title="Enllaça amb aquesta capçalera">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Comptabilitat i finances</strong> (integrat amb compres i vendes).</p></li>
+<li><p class="sd-card-text"><strong>Compres, vendes i magatzem</strong>.</p></li>
+<li><p class="sd-card-text"><strong>Facturació</strong>.</p></li>
+<li><p class="sd-card-text"><strong>Gestió de personal (RRHH)</strong>.</p></li>
+<li><p class="sd-card-text"><strong>CRM</strong>.</p></li>
+</ul>
+<p class="sd-card-text">Tots estan interrelacionats i comparteixen informació en temps real.</p>
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="per-que-es-important-la-localitzacio-del-pais-en-un-erp">
+<h3>8. Per què és important la localització del país en un ERP?<a class="headerlink" href="#per-que-es-important-la-localitzacio-del-pais-en-un-erp" title="Enllaça amb aquesta capçalera">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">La localització defineix normativa fiscal, idiomes, impostos i documents oficials.<br />
+Exemple: l’IVA a Espanya (21%) i França (20%) és diferent, i l’ERP ha d’adaptar-se.</p>
+</div>
+</details></section>
+</section>
+<hr class="docutils" />
+<section id="script-per-retardar-la-publicacio">
+<h2>Script per retardar la publicació<a class="headerlink" href="#script-per-retardar-la-publicacio" title="Enllaça amb aquesta capçalera">#</a></h2>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date();
+  document.querySelectorAll("details.dropdown").forEach(el => {
+    const release = el.getAttribute("data-release");
+    if (release) {
+      const rDate = new Date(release);
+      if (today < rDate) {
+        el.innerHTML = "<p><em>La solució estarà disponible a partir del " + rDate.toLocaleDateString() + ".</em></p>";
+      }
+    }
+  });
+});
+</script><div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Continguts</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="situacio.html">Situació inicial</a><ul>
@@ -447,6 +618,7 @@ Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, i
 </li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -475,6 +647,33 @@ Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, i
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp-crm">Introducció a Odoo i als sistemes ERP-CRM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-gestio-empresarial-quins-objectius-te">1. Què és la gestió empresarial? Quins objectius té?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa">2. Què entens per ERP i què gestiona en una empresa?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-un-crm">3. Què és un CRM?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriu-larquitectura-mvc-dodoo">4. Descriu l’arquitectura MVC d’Odoo.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explica-les-diferents-formes-dinstallar-un-erp-quina-utilitzarem-nosaltres">5. Explica les diferents formes d’instal·lar un ERP. Quina utilitzarem nosaltres?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entenem-per-modul-base-quins-components-en-formen-part-en-odoo">6. Què entenem per mòdul base? Quins components en formen part en Odoo?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomena-els-tipus-de-moduls-que-podem-installar-en-un-erp-i-com-es-relacionen">7. Nomena els tipus de mòduls que podem instal·lar en un ERP i com es relacionen.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-que-es-important-la-localitzacio-del-pais-en-un-erp">8. Per què és important la localització del país en un ERP?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#script-per-retardar-la-publicacio">Script per retardar la publicació</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
