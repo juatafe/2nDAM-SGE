@@ -1,7 +1,7 @@
-Unitat 1. Identificació de sistemes ERP/CRM
+Unitat 1. Identificació de sistemes ERP
 ===========================================
 
-Introducció a Odoo i als sistemes ERP-CRM
+Introducció a Odoo i als sistemes ERP
 -----------------------------------------
 
 Els sistemes **ERP (Enterprise Resource Planning)** són programes de gestió empresarial integrada.
@@ -115,6 +115,7 @@ flowchart LR
     Model[Model<br/>Dades / ORM]
     View[Vista<br/>XML]
     Controller[Controlador<br/>Python]
+
 ```
 
 ::::

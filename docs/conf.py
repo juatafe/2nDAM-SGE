@@ -14,7 +14,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx.ext.imgconverter",
     "sphinx_design",
-    "sphinxcontrib.mermaid", 
+    "myst_mermaid",  # 👈
 ]
 
 myst_enable_extensions = ["colon_fence", "attrs_block", "deflist"]
