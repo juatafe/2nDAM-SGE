@@ -533,23 +533,29 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="release-date" data-release="2025-09-10"></span></p>
 <p class="sd-card-text">L’arquitectura d’Odoo és de tipus <strong>Model–Vista–Controlador (MVC)</strong>.<br />
-Això vol dir que es separa la lògica d’aplicació de la interfície gràfica a través d’un controlador,
-fet que permet modificar o ampliar mòduls sense afectar la resta del sistema.</p>
+Això vol dir que, utilitzant aquest patró de tres components, es pot separar la lògica d’aplicació de la lògica de vista (interfície gràfica) a través d’un controlador.</p>
+<p class="sd-card-text">Aquesta separació permet modificar o personalitzar parts de l’aplicació sense afectar la resta del sistema.<br />
+El <strong>framework d’Odoo</strong> (anomenat <em>OpenObject</em>, de tipus RAD) permet ampliar ràpidament Odoo amb mòduls mitjançant la capa ORM, i facilita diversos components que permeten construir l’aplicació seguint l’arquitectura MVC.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Model:</strong> s’encarrega de les dades (taules PostgreSQL via ORM).</p></li>
-<li><p class="sd-card-text"><strong>Controlador:</strong> gestiona peticions dels usuaris, sol·licita dades al model i les envia a la vista.</p></li>
-<li><p class="sd-card-text"><strong>Vista:</strong> representació gràfica definida en XML.</p></li>
+<li><p class="sd-card-text"><strong>Model:</strong> s’encarrega de les dades (ORM i taules PostgreSQL).</p></li>
+<li><p class="sd-card-text"><strong>Vista:</strong> representació gràfica (XML).</p></li>
+<li><p class="sd-card-text"><strong>Controlador:</strong> rep peticions, sol·licita dades al model i les envia a la vista.</p></li>
 </ul>
 <pre  class="mermaid">
         flowchart LR
-    Controller --&gt; Model
-    Controller --&gt; View
+    Controller[Controlador] --&gt; Model[Model&lt;br/&gt;(Dades/ORM)]
+    Controller --&gt; View[Vista&lt;br/&gt;(XML)]
     Model --&gt; Controller
     View --&gt; Controller
 
-    Model[Model&lt;br/&gt;Dades / ORM]
-    View[Vista&lt;br/&gt;XML]
-    Controller[Controlador&lt;br/&gt;Python]
+    %% estils
+    Controller:::c
+    Model:::m
+    View:::v
+
+    classDef c fill=#ffebcc,stroke=#d4a017,stroke-width=2px;
+    classDef m fill=#d6eaf8,stroke=#2980b9,stroke-width=2px;
+    classDef v fill=#d5f5e3,stroke=#27ae60,stroke-width=2px;
 
     </pre></div>
 </details></section>

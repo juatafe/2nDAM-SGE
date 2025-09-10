@@ -98,23 +98,30 @@ Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb 
 <span class="release-date" data-release="2025-09-10"></span>
 
 L’arquitectura d’Odoo és de tipus **Model–Vista–Controlador (MVC)**.  
-Això vol dir que es separa la lògica d’aplicació de la interfície gràfica a través d’un controlador, 
-fet que permet modificar o ampliar mòduls sense afectar la resta del sistema.  
+Això vol dir que, utilitzant aquest patró de tres components, es pot separar la lògica d’aplicació de la lògica de vista (interfície gràfica) a través d’un controlador.  
 
-- **Model:** s’encarrega de les dades (taules PostgreSQL via ORM).  
-- **Controlador:** gestiona peticions dels usuaris, sol·licita dades al model i les envia a la vista.  
-- **Vista:** representació gràfica definida en XML.  
+Aquesta separació permet modificar o personalitzar parts de l’aplicació sense afectar la resta del sistema.  
+El **framework d’Odoo** (anomenat *OpenObject*, de tipus RAD) permet ampliar ràpidament Odoo amb mòduls mitjançant la capa ORM, i facilita diversos components que permeten construir l’aplicació seguint l’arquitectura MVC.  
+
+- **Model:** s’encarrega de les dades (ORM i taules PostgreSQL).  
+- **Vista:** representació gràfica (XML).  
+- **Controlador:** rep peticions, sol·licita dades al model i les envia a la vista.  
 
 ```{mermaid}
 flowchart LR
-    Controller --> Model
-    Controller --> View
+    Controller[Controlador] --> Model[Model<br/>(Dades/ORM)]
+    Controller --> View[Vista<br/>(XML)]
     Model --> Controller
     View --> Controller
 
-    Model[Model<br/>Dades / ORM]
-    View[Vista<br/>XML]
-    Controller[Controlador<br/>Python]
+    %% estils
+    Controller:::c
+    Model:::m
+    View:::v
+
+    classDef c fill=#ffebcc,stroke=#d4a017,stroke-width=2px;
+    classDef m fill=#d6eaf8,stroke=#2980b9,stroke-width=2px;
+    classDef v fill=#d5f5e3,stroke=#27ae60,stroke-width=2px;
 
 ```
 
