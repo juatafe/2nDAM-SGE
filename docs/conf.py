@@ -25,6 +25,10 @@ html_theme = os.environ.get("SPHINX_THEME", "sphinx_book_theme")  # "furo" | "sp
 html_title = "Sistemes de Gestió Empresarial"
 html_baseurl = "https://juatafe.github.io/2nDAM-SGE/"
 html_static_path = ["_static"]
+# afegir script JS
+html_js_files = [
+    "release_control.js",
+]
 templates_path = ["_templates"]
 # Logos i favicon (com ja tenies)
 html_logo = "_static/assets/img/logos/logoJust.png"
