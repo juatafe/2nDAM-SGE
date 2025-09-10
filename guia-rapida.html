@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introducció a Odoo i als sistemes ERP-CRM &#8212; Sistemes de Gestió Empresarial</title>
+    <title>Guia ràpida &#8212; Sistemes de Gestió Empresarial</title>
   
   
   
@@ -49,11 +49,10 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="_static/translations.js?v=5e30842e"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guia-rapida';</script>
     <link rel="icon" href="_static/logo50.ico"/>
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Situació inicial" href="situacio.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ca"/>
@@ -145,6 +144,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="Continguts de la pàgina">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -154,8 +157,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -175,7 +176,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -279,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/juatafe/2nDAM-SGE/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/juatafe/2nDAM-SGE/issues/new?title=Issue%20on%20page%20%2Fguia-rapida.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Obriu un número"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +310,7 @@
       
       
       
-      <li><a href="_sources/index.md" target="_blank"
+      <li><a href="_sources/guia-rapida.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Baixeu el fitxer font"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -380,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -391,11 +394,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introducció a Odoo i als sistemes ERP-CRM</h1>
+    <h1>Guia ràpida</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desenvolupament-en-local-no-es-necessari">1) Desenvolupament en local(no és necessari)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura">2) Estructura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publicacio">3) Publicació</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -405,48 +418,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introduccio-a-odoo-i-als-sistemes-erp-crm">
-<h1>Introducció a Odoo i als sistemes ERP-CRM<a class="headerlink" href="#introduccio-a-odoo-i-als-sistemes-erp-crm" title="Enllaça amb aquesta capçalera">#</a></h1>
-<p>Els <strong>sistemes ERP (Enterprise Resource Planning)</strong> són programes de gestió empresarial integrada.<br />
-Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, inventari, vendes, producció, recursos humans i atenció ciutadana.</p>
-<p>👉 En el cas d’una empresa, això ajuda a:</p>
-<ul class="simple">
-<li><p>Evitar duplicitat de dades.</p></li>
-<li><p>Reduir errors humans.</p></li>
-<li><p>Facilitar la presa de decisions amb dades en temps real.</p></li>
-<li><p>Millorar la coordinació entre departaments.</p></li>
-</ul>
-<p>Els ERP poden ser <strong>propietaris</strong> (com SAP, Dynamics, Sage) o <strong>lliures</strong> (com Odoo, Dolibarr).</p>
-<p>Un cas molt interessant és <strong>Odoo</strong>, que destaca per:</p>
-<ul class="simple">
-<li><p>Cost inicial baix (Community gratis, Enterprise amb subscripció).</p></li>
-<li><p>Arquitectura modular i escalable.</p></li>
-<li><p>Interfície moderna i fàcil d’usar.</p></li>
-<li><p>Gran comunitat de desenvolupadors i mòduls.</p></li>
-</ul>
-<p>Per això en aquest mòdul utilitzarem <strong>Odoo Community 16</strong> com a referència.</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Continguts</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="situacio.html">Situació inicial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="situacio.html#tasca-individual">Tasca individual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="situacio.html#pregunta-guia">Pregunta guia</a></li>
-<li class="toctree-l2"><a class="reference internal" href="situacio.html#rubrica-davaluacio">Rúbrica d’avaluació</a></li>
-<li class="toctree-l2"><a class="reference internal" href="situacio.html#resultat-esperat">Resultat esperat</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="informe.html">Informe individual: Exemple resolt</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#introduccio">1. Introducció</a></li>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#exemples-derp-crm">2. Exemples d’ERP-CRM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#comparacio-de-sistemes">3. Comparació de sistemes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#aplicacio-al-meu-ajuntament">4. Aplicació al meu Ajuntament</a></li>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#possibles-incidencies">5. Possibles incidències</a></li>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#conclusions">6. Conclusions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="informe.html#annexos">7. Annexos</a></li>
-</ul>
-</li>
-</ul>
+  <section id="guia-rapida">
+<h1>Guia ràpida<a class="headerlink" href="#guia-rapida" title="Enllaça amb aquesta capçalera">#</a></h1>
+<section id="desenvolupament-en-local-no-es-necessari">
+<h2>1) Desenvolupament en local(no és necessari)<a class="headerlink" href="#desenvolupament-en-local-no-es-necessari" title="Enllaça amb aquesta capçalera">#</a></h2>
+<p>No és necessari treballar en local: la plantilla ja està preparada perquè GitHub compile la documentació i la publique automàticament quan faces push a main.
+Si vols treballar i previsualitzar en local abans de publicar, segueix les instruccions indicades:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1) Crear i activar l&#39;entorn virtual</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+
+<span class="c1"># 2) Instal·lar dependències (o usa el contenidor del workflow)</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c1"># 3) Compilar l&#39;HTML (des de l&#39;arrel del repo)</span>
+sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>docs<span class="w"> </span>_build/html
+
+<span class="c1"># 4) Obrir en el navegador (tria el teu sistema)</span>
+xdg-open<span class="w"> </span>_build/html/index.html<span class="w">        </span><span class="c1"># Linux</span>
+<span class="c1"># open _build/html/index.html          # macOS</span>
+<span class="c1"># start _build/html/index.html         # Windows (PowerShell)</span>
+</pre></div>
 </div>
+</section>
+<section id="estructura">
+<h2>2) Estructura<a class="headerlink" href="#estructura" title="Enllaça amb aquesta capçalera">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docs/
+  ├─ index.md
+  ├─ guia-rapida.md
+  ├─ personalitzacio.md
+  ├─ duplicar-plantilla.md
+  ├─ _static/
+  ├─ _templates/
+  └─ conf.py
+</pre></div>
+</div>
+</section>
+<section id="publicacio">
+<h2>3) Publicació<a class="headerlink" href="#publicacio" title="Enllaça amb aquesta capçalera">#</a></h2>
+<p>Només cal fer <em>push</em> a <code class="docutils literal notranslate"><span class="pre">main</span></code>. El workflow compila <strong>HTML</strong> i <strong>PDF</strong> i els puja a <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>.
+Abans, guarda i envia els canvis amb:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Actualització de contingut&quot;</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<!-- 
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+
+``` --></section>
 </section>
 
 
@@ -460,21 +484,29 @@ Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, i
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="situacio.html"
-       title="pàgina següent">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">següent</p>
-        <p class="prev-next-title">Situació inicial</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desenvolupament-en-local-no-es-necessari">1) Desenvolupament en local(no és necessari)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura">2) Estructura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publicacio">3) Publicació</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
