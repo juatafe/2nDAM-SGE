@@ -107,21 +107,18 @@ El **framework d’Odoo** (anomenat *OpenObject*, de tipus RAD) permet ampliar r
 - **Vista:** representació gràfica (XML).  
 - **Controlador:** rep peticions, sol·licita dades al model i les envia a la vista.  
 
+
 ```{mermaid}
 flowchart LR
-    Controller[Controlador] --> Model[Model<br/>(Dades/ORM)]
-    Controller --> View[Vista<br/>(XML)]
+    Controller --> Model
+    Controller --> View
     Model --> Controller
     View --> Controller
+    Model --> View
 
-    %% estils
-    Controller:::c
-    Model:::m
-    View:::v
-
-    classDef c fill=#ffebcc,stroke=#d4a017,stroke-width=2px;
-    classDef m fill=#d6eaf8,stroke=#2980b9,stroke-width=2px;
-    classDef v fill=#d5f5e3,stroke=#27ae60,stroke-width=2px;
+    Model[Model<br/>Dades / ORM]
+    View[Vista<br/>XML]
+    Controller[Controlador<br/>Python]
 
 ```
 
