@@ -27,7 +27,7 @@ jobs:
       - name: Check if image exists on GHCR
         id: out
         run: |
-          if docker manifest inspect ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/sphinx-latex:latest > /dev/null 2>&1; then
+          if docker manifest inspect ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/2ndam-sge:latest > /dev/null 2>&1; then
             echo "has_image=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_image=false" >> "$GITHUB_OUTPUT"
@@ -69,14 +69,14 @@ jobs:
           context: .
           file: .ci/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/2nDAM-SGE:latest
+          tags: ghcr.io/${{ github.repository_owner }}/2ndam-sge:latest
 
   build-deploy:
     needs: [check-image, build-container]
     if: ${{ always() && (needs.check-image.outputs.needs_build == 'false' || needs.build-container.result == 'success') }}
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/${{ github.repository_owner }}/2nDAM-SGE:latest
+      image: ghcr.io/${{ github.repository_owner }}/2ndam-sge:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
