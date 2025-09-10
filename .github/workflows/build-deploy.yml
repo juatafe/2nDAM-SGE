@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   workflow_dispatch: {}
 
-# Necessitem WRITE per a fer push a gh-pages
+# Necessitem WRITE per a fer push a gh-pages 
 permissions:
   contents: read
   packages: write
