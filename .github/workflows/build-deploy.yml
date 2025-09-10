@@ -7,7 +7,7 @@ on:
 
 # Necessitem WRITE per a fer push a gh-pages 
 permissions:
-  contents: write
+  contents: write 
   packages: write
 
 concurrency:
