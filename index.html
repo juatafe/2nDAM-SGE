@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Unitat 1. Identificació de sistemes ERP/CRM &#8212; Sistemes de Gestió Empresarial</title>
+    <title>Unitat 1. Identificació de sistemes ERP &#8212; Sistemes de Gestió Empresarial</title>
   
   
   
@@ -49,6 +49,14 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="_static/translations.js?v=5e30842e"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <script src="_static/release_control.js?v=cfa7eed6"></script>
     <link rel="canonical" href="https://juatafe.github.io/2nDAM-SGE/index.html" />
@@ -399,7 +407,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unitat 1. Identificació de sistemes ERP/CRM</h1>
+    <h1>Unitat 1. Identificació de sistemes ERP</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -409,7 +417,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp-crm">Introducció a Odoo i als sistemes ERP-CRM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp">Introducció a Odoo i als sistemes ERP</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-gestio-empresarial-quins-objectius-te">1. Què és la gestió empresarial? Quins objectius té?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa">2. Què entens per ERP i què gestiona en una empresa?</a></li>
@@ -432,10 +440,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="unitat-1-identificacio-de-sistemes-erp-crm">
-<h1>Unitat 1. Identificació de sistemes ERP/CRM<a class="headerlink" href="#unitat-1-identificacio-de-sistemes-erp-crm" title="Enllaça amb aquesta capçalera">#</a></h1>
-<section id="introduccio-a-odoo-i-als-sistemes-erp-crm">
-<h2>Introducció a Odoo i als sistemes ERP-CRM<a class="headerlink" href="#introduccio-a-odoo-i-als-sistemes-erp-crm" title="Enllaça amb aquesta capçalera">#</a></h2>
+  <section id="unitat-1-identificacio-de-sistemes-erp">
+<h1>Unitat 1. Identificació de sistemes ERP<a class="headerlink" href="#unitat-1-identificacio-de-sistemes-erp" title="Enllaça amb aquesta capçalera">#</a></h1>
+<section id="introduccio-a-odoo-i-als-sistemes-erp">
+<h2>Introducció a Odoo i als sistemes ERP<a class="headerlink" href="#introduccio-a-odoo-i-als-sistemes-erp" title="Enllaça amb aquesta capçalera">#</a></h2>
 <p>Els sistemes <strong>ERP (Enterprise Resource Planning)</strong> són programes de gestió empresarial integrada.
 Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, inventari, vendes, producció,
 recursos humans i atenció ciutadana.</p>
@@ -464,7 +472,7 @@ recursos humans i atenció ciutadana.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <p class="sd-card-text">Podríem definir la <strong>gestió empresarial</strong> com l’habilitat per organitzar, controlar i dirigir
 una empresa o organització per assolir els objectius proposats utilitzant diverses estratègies.</p>
 <p class="sd-card-text"><strong>Objectius principals:</strong></p>
@@ -485,7 +493,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <p class="sd-card-text">Els <strong>ERP</strong> són sistemes d’informació gerencial que integren i gestionen processos de producció i distribució.</p>
 <p class="sd-card-text"><strong>Exemples del llistat:</strong></p>
 <ul class="simple">
@@ -503,7 +511,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <p class="sd-card-text">Un <strong>CRM</strong> és un sistema d’informació que ajuda a gestionar la relació amb els clients, amb dues parts:</p>
 <ul class="simple">
 <li><p class="sd-card-text">Lògica operacional (tasques).</p></li>
@@ -523,15 +531,27 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
-<p class="sd-card-text">L’arquitectura d’Odoo és <strong>Model–Vista–Controlador (MVC)</strong>.</p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-10"></span></p>
+<p class="sd-card-text">L’arquitectura d’Odoo és de tipus <strong>Model–Vista–Controlador (MVC)</strong>.<br />
+Això vol dir que es separa la lògica d’aplicació de la interfície gràfica a través d’un controlador,
+fet que permet modificar o ampliar mòduls sense afectar la resta del sistema.</p>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Model:</strong> Taules PostgreSQL (ORM).</p></li>
-<li><p class="sd-card-text"><strong>Vista:</strong> Definida amb XML.</p></li>
-<li><p class="sd-card-text"><strong>Controlador:</strong> Objectes Python que processen peticions i dades.</p></li>
+<li><p class="sd-card-text"><strong>Model:</strong> s’encarrega de les dades (taules PostgreSQL via ORM).</p></li>
+<li><p class="sd-card-text"><strong>Controlador:</strong> gestiona peticions dels usuaris, sol·licita dades al model i les envia a la vista.</p></li>
+<li><p class="sd-card-text"><strong>Vista:</strong> representació gràfica definida en XML.</p></li>
 </ul>
-<p class="sd-card-text">El framework <strong>OpenObject</strong> facilita crear i ampliar mòduls seguint MVC.</p>
-</div>
+<pre  class="mermaid">
+        flowchart LR
+    Controller --&gt; Model
+    Controller --&gt; View
+    Model --&gt; Controller
+    View --&gt; Controller
+
+    Model[Model&lt;br/&gt;Dades / ORM]
+    View[Vista&lt;br/&gt;XML]
+    Controller[Controlador&lt;br/&gt;Python]
+
+    </pre></div>
 </details></section>
 <hr class="docutils" />
 <section id="explica-les-diferents-formes-dinstallar-un-erp-quina-utilitzarem-nosaltres">
@@ -539,7 +559,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <ul class="simple">
 <li><p class="sd-card-text">Instal·lació en <strong>màquina virtual</strong>.</p></li>
 <li><p class="sd-card-text">Instal·lació amb <strong>paquets gràfics</strong> (assistents).</p></li>
@@ -555,7 +575,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <p class="sd-card-text">El <strong>mòdul base</strong> és el conjunt mínim perquè Odoo funcione.</p>
 <p class="sd-card-text">Inclou:</p>
 <ul class="simple">
@@ -570,7 +590,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <ul class="simple">
 <li><p class="sd-card-text"><strong>Gestió comptable i financera</strong> (integrada amb compres i vendes).</p></li>
 <li><p class="sd-card-text"><strong>Compres, vendes i magatzem.</strong></p></li>
@@ -587,26 +607,12 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solució</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="release-date" data-release="2025-09-29"></span></p>
+<p class="sd-card-text"><span class="release-date" data-release="2025-09-18"></span></p>
 <p class="sd-card-text">La <strong>localització</strong> configura normativa fiscal, idioma, impostos i documents oficials.</p>
 <p class="sd-card-text">Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les factures serien errònies.</p>
 </div>
 </details><hr class="docutils" />
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const today = new Date();
-  document.querySelectorAll("details.dropdown").forEach(el => {
-    const release = el.getAttribute("data-release");
-    if (release) {
-      const rDate = new Date(release);
-      if (today < rDate) {
-        el.innerHTML = "<p><em>La solució estarà disponible a partir del "
-          + rDate.toLocaleDateString() + ".</em></p>";
-      }
-    }
-  });
-});
-</script><div class="toctree-wrapper compound">
+<div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Continguts</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="situacio.html">Situació inicial</a><ul>
@@ -668,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp-crm">Introducció a Odoo i als sistemes ERP-CRM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp">Introducció a Odoo i als sistemes ERP</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-gestio-empresarial-quins-objectius-te">1. Què és la gestió empresarial? Quins objectius té?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa">2. Què entens per ERP i què gestiona en una empresa?</a></li>
