@@ -417,7 +417,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp">Introducció a Odoo i als sistemes ERP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp">Introducció a Odoo i als sistemes ERP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avantatges-dels-erp-en-una-empresa">Avantatges dels ERP en una empresa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipus-derp">Tipus d’ERP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-cas-dodoo">El cas d’Odoo</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-gestio-empresarial-quins-objectius-te">1. Què és la gestió empresarial? Quins objectius té?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa">2. Què entens per ERP i què gestiona en una empresa?</a></li>
@@ -444,25 +449,58 @@ document.write(`
 <h1>Unitat 1. Identificació de sistemes ERP<a class="headerlink" href="#unitat-1-identificacio-de-sistemes-erp" title="Enllaça amb aquesta capçalera">#</a></h1>
 <section id="introduccio-a-odoo-i-als-sistemes-erp">
 <h2>Introducció a Odoo i als sistemes ERP<a class="headerlink" href="#introduccio-a-odoo-i-als-sistemes-erp" title="Enllaça amb aquesta capçalera">#</a></h2>
-<p>Els sistemes <strong>ERP (Enterprise Resource Planning)</strong> són programes de gestió empresarial integrada.
-Són capaços d’unificar en una sola plataforma àrees com la comptabilitat, inventari, vendes, producció,
-recursos humans i atenció ciutadana.</p>
-<p>👉 En el cas d’una empresa, això ajuda a:</p>
+<p>Els <strong>ERP (Enterprise Resource Planning)</strong> són programes de <strong>gestió empresarial integrada</strong>.<br />
+Permeten unificar en una sola plataforma àrees com:</p>
 <ul class="simple">
-<li><p>Evitar duplicitat de dades.</p></li>
-<li><p>Reduir errors humans.</p></li>
-<li><p>Facilitar la presa de decisions amb dades en temps real.</p></li>
-<li><p>Millorar la coordinació entre departaments.</p></li>
+<li><p>Comptabilitat</p></li>
+<li><p>Inventari</p></li>
+<li><p>Vendes</p></li>
+<li><p>Producció</p></li>
+<li><p>Recursos humans</p></li>
+<li><p>Atenció ciutadana</p></li>
 </ul>
-<p>Els ERP poden ser <strong>propietaris</strong> (SAP, Dynamics, Sage) o <strong>lliures</strong> (Odoo, Dolibarr).</p>
-<p>Un cas molt interessant és <strong>Odoo</strong>, que destaca per:</p>
+<hr class="docutils" />
+<section id="avantatges-dels-erp-en-una-empresa">
+<h3>Avantatges dels ERP en una empresa<a class="headerlink" href="#avantatges-dels-erp-en-una-empresa" title="Enllaça amb aquesta capçalera">#</a></h3>
+<p>👉 Un ERP ajuda a:</p>
 <ul class="simple">
-<li><p>Cost inicial baix (Community gratis, Enterprise amb subscripció).</p></li>
-<li><p>Arquitectura modular i escalable.</p></li>
-<li><p>Interfície moderna i fàcil d’usar.</p></li>
-<li><p>Gran comunitat de desenvolupadors i mòduls.</p></li>
+<li><p>Evitar duplicitat de dades</p></li>
+<li><p>Reduir errors humans</p></li>
+<li><p>Facilitar la presa de decisions en temps real</p></li>
+<li><p>Millorar la coordinació entre departaments</p></li>
 </ul>
-<p>Per això en aquest mòdul utilitzarem <strong>Odoo Community 16</strong> com a referència.</p>
+<pre  class="mermaid">
+        flowchart TD
+    A[Dades disperses] --&gt;|Sense ERP| B[Errors i duplicitats]
+    A --&gt;|Amb ERP| C[Base de dades comuna]
+    C --&gt; D[Decisions més ràpides]
+    C --&gt; E[Millor coordinació]
+    style A fill=#f9e79f,stroke=#b7950b,stroke-width=2px
+    style B fill=#f5b7b1,stroke=#922b21,stroke-width=2px
+    style C fill=#d6eaf8,stroke=#2874a6,stroke-width=2px
+    style D fill=#d5f5e3,stroke=#1e8449,stroke-width=2px
+    style E fill=#d5f5e3,stroke=#1e8449,stroke-width=2px
+    </pre></section>
+<hr class="docutils" />
+<section id="tipus-derp">
+<h3>Tipus d’ERP<a class="headerlink" href="#tipus-derp" title="Enllaça amb aquesta capçalera">#</a></h3>
+<ul class="simple">
+<li><p><strong>Propietaris:</strong> <em>SAP, Dynamics, Sage</em></p></li>
+<li><p><strong>Lliures:</strong> <em>Odoo, Dolibarr</em></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="el-cas-dodoo">
+<h3>El cas d’Odoo<a class="headerlink" href="#el-cas-dodoo" title="Enllaça amb aquesta capçalera">#</a></h3>
+<p>Odoo destaca per:</p>
+<ul class="simple">
+<li><p>💰 <strong>Cost inicial baix</strong> (Community gratis, Enterprise amb subscripció)</p></li>
+<li><p>🧩 <strong>Arquitectura modular i escalable</strong></p></li>
+<li><p>🖥️ <strong>Interfície moderna i fàcil d’usar</strong></p></li>
+<li><p>🌍 <strong>Gran comunitat de desenvolupadors i mòduls</strong></p></li>
+</ul>
+<p>➡️ En aquest mòdul utilitzarem <strong>Odoo Community 16</strong> com a referència.</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="exercicis">
@@ -545,9 +583,9 @@ El <strong>framework d’Odoo</strong> (anomenat <em>OpenObject</em>, de tipus R
         flowchart LR
     Controller --&gt; Model
     Controller --&gt; View
-    Model --&gt; Controller
     View --&gt; Controller
     Model --&gt; View
+    View --&gt; Model
 
     Model[Model&lt;br/&gt;Dades / ORM]
     View[Vista&lt;br/&gt;XML]
@@ -676,7 +714,12 @@ El <strong>framework d’Odoo</strong> (anomenat <em>OpenObject</em>, de tipus R
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp">Introducció a Odoo i als sistemes ERP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-odoo-i-als-sistemes-erp">Introducció a Odoo i als sistemes ERP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avantatges-dels-erp-en-una-empresa">Avantatges dels ERP en una empresa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipus-derp">Tipus d’ERP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-cas-dodoo">El cas d’Odoo</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-gestio-empresarial-quins-objectius-te">1. Què és la gestió empresarial? Quins objectius té?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-entens-per-erp-i-que-gestiona-en-una-empresa">2. Què entens per ERP i què gestiona en una empresa?</a></li>
