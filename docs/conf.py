@@ -23,6 +23,7 @@ myst_heading_anchors = 3
 # Pots triar via variable d'entorn: SPHINX_THEME=pydata_sphinx_theme make html
 html_theme = os.environ.get("SPHINX_THEME", "sphinx_book_theme")  # "furo" | "sphinx_rtd_theme" | "pydata_sphinx_theme" | "alabaster"
 html_title = "Sistemes de Gestió Empresarial"
+html_baseurl = "https://juatafe.github.io/2nDAM-SGE/"
 html_static_path = ["_static"]
 templates_path = ["_templates"]
 # Logos i favicon (com ja tenies)
@@ -115,6 +116,9 @@ elif html_theme == "sphinx_book_theme":
     html_theme_options = _book_opts
 else:
     html_theme_options = {}
+
+# Afig opció global extra
+html_theme_options["navigation_with_keys"] = True
 
 # Context per a botó "Edita a GitHub" (el tenies actiu)
 html_context = {
