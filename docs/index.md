@@ -1,4 +1,91 @@
 # Unitat 1. Identificació de sistemes ERP
+## 1. Introducció a la gestió empresarial
+
+La **gestió empresarial** és la ciència social que té per objecte l’estudi de les organitzacions i la tècnica encarregada de la **planificació, organització, direcció i control** dels recursos (humans, financers, materials, tecnològics, coneixement, etc.) d’una organització, per obtenir eficiència o el màxim benefici possible.  
+
+Aquest benefici pot ser **social, econòmic o estratègic**, depenent dels fins perseguits per l’organització.
+
+---
+
+## Quadre de comandament integral
+
+```{graphviz}
+digraph G {
+  layout=neato
+  overlap=false
+  splines=true
+  bgcolor="transparent"
+  node [shape=box, style=filled, fontname="Helvetica", fontsize=12]
+
+  V [label="Visió i Estratègia", fillcolor="#d6eaf8", color="#2980b9", pos="0,0!"]
+
+  F [label="Financer\nÈxit financer", fillcolor="#abebc6", color="#27ae60", pos="0,2!"]
+  P [label="Processos Interns\nEn què hem de sobresortir?", fillcolor="#aed6f1", color="#2874a6", pos="2,0!"]
+  A [label="Aprenentatge i Creixement\nCom mantenir la capacitat?", fillcolor="#d7bde2", color="#8e44ad", pos="0,-2!"]
+  C [label="Client\nCom hem de ser vistos?", fillcolor="#f5b7b1", color="#922b21", pos="-2,0!"]
+
+  V -> F
+  V -> P
+  V -> A
+  V -> C
+
+  F -> P
+  P -> A
+  A -> C
+  C -> F
+}
+
+```
+
+
+---
+
+## Característiques de l’administració
+
+L’**administració** organitza i coordina els recursos d’un organisme social per aconseguir els seus objectius de manera **eficaç** (arribar al que es proposa) i **eficient** (optimitzar els mitjans).  
+Es fonamenta en la **planificació, organització, integració de personal, direcció i control**, i té en la **presa de decisions** el seu nucli fonamental.
+
+---
+
+## Taula comparativa de característiques
+
+| **Característica**       | **Definició / Explicació breu** |
+|---------------------------|---------------------------------|
+| **Universalitat**         | Present en qualsevol organisme social (empresa, estat, exèrcit, escola, església…). Els elements bàsics són els mateixos encara que hi haja variants. |
+| **Especificitat**         | L’administració és un fenomen propi, no es pot confondre amb altres ciències o tècniques. Encara que s’hi recolze, manté la seua identitat. |
+| **Unitat temporal**       | És un procés **continu**: planificar, organitzar, dirigir i controlar tenen lloc de manera simultània en la vida de l’empresa. |
+| **Unitat jeràrquica**     | Tots els nivells jeràrquics participen de la mateixa funció administrativa, des del gerent general fins a l’últim supervisor. |
+| **Valor instrumental**    | No és un fi en si mateixa: és un **mitjà** per assolir els objectius de manera eficient. |
+| **Amplitud d’exercici**   | Es pot aplicar a tots els nivells i rols: presidents, gerents, supervisors… fins i tot a la gestió domèstica (ex. una ama de casa). |
+| **Interdisciplinarietat** | Integra coneixements d’altres ciències: matemàtiques, estadística, economia, comptabilitat, dret, sociologia, psicologia, filosofia, antropologia, ciència política. |
+| **Flexibilitat**          | Els seus principis i tècniques s’adapten a diferents empreses, sectors i contextos socials. |
+
+---
+
+## Diagrama visual de les característiques
+
+```{graphviz}
+digraph G {
+  layout=circo
+  bgcolor="transparent"
+  node [shape=box, style=filled, fontname="Helvetica", fontsize=11, fillcolor="#eaf2f8", color="#2980b9"]
+
+  A [label="Administració", fillcolor="#d6eaf8", color="#1f618d"]
+
+  B [label="Universalitat"]
+  C [label="Especificitat"]
+  D [label="Unitat temporal"]
+  E [label="Unitat jeràrquica"]
+  F [label="Valor instrumental"]
+  G [label="Amplitud d’exercici"]
+  H [label="Interdisciplinarietat"]
+  I [label="Flexibilitat"]
+
+  A -> {B C D E F G H I}
+}
+
+```
+---
 
 ## Introducció a Odoo i als sistemes ERP
 
@@ -29,11 +116,12 @@ flowchart TD
     A -->|Amb ERP| C[Base de dades comuna]
     C --> D[Decisions més ràpides]
     C --> E[Millor coordinació]
-    style A fill=#f9e79f,stroke=#b7950b,stroke-width=2px
-    style B fill=#f5b7b1,stroke=#922b21,stroke-width=2px
-    style C fill=#d6eaf8,stroke=#2874a6,stroke-width=2px
-    style D fill=#d5f5e3,stroke=#1e8449,stroke-width=2px
-    style E fill=#d5f5e3,stroke=#1e8449,stroke-width=2px
+
+    style A fill:#f9e79f,stroke:#b7950b,stroke-width:2px
+    style B fill:#f5b7b1,stroke:#922b21,stroke-width:2px
+    style C fill:#d6eaf8,stroke:#2874a6,stroke-width:2px
+    style D fill:#d5f5e3,stroke:#1e8449,stroke-width:2px
+    style E fill:#d5f5e3,stroke:#1e8449,stroke-width:2px
 ```
 
 ---
@@ -138,11 +226,18 @@ El **framework d’Odoo** (anomenat *OpenObject*, de tipus RAD) permet ampliar r
 
 
 ```{mermaid}
-flowchart LR
+flowchart TB
+    Controller[Controlador]
+
+    subgraph row[" "]
+        Model[Model]
+        View[Vista]
+    end
+
     Controller --> Model
     Controller --> View
-    View --> Controller
-    Model --> View
+    View -.-> Controller
+    Model -.-> View
     View --> Model
 
     Model[Model<br/>Dades / ORM]

@@ -15,6 +15,7 @@ extensions = [
     "sphinx.ext.imgconverter",
     "sphinx_design",
     "sphinxcontrib.mermaid",
+    "sphinx.ext.graphviz", 
 ]
 
 myst_enable_extensions = ["colon_fence", "attrs_block", "deflist"]

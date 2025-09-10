@@ -7,3 +7,4 @@ sphinx_rtd_theme
 furo
 sphinx_book_theme
 sphinxcontrib-mermaid
+graphviz      # 👈 llibreria Python per Graphviz
