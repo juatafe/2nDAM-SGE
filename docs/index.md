@@ -26,6 +26,7 @@ Un cas molt interessant és **Odoo**, que destaca per:
 
 Per això en aquest mòdul utilitzarem **Odoo Community 16** com a referència.
 
+
 ---
 
 ## Exercicis
@@ -34,17 +35,18 @@ Per això en aquest mòdul utilitzarem **Odoo Community 16** com a referència.
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-15
+:data-release: 2025-09-20
 
-La gestió empresarial és l’habilitat per organitzar, controlar i dirigir una empresa o
-organització per assolir els objectius proposats.  
+Podríem definir la **gestió empresarial** com l'habilitat per organitzar, controlar i dirigir
+una empresa o organització per assolir els objectius proposats utilitzant diverses estratègies.
+
 **Objectius principals:**
-- Planificació
-- Organització
-- Direcció
-- Control
-- Dotació de personal
-- Coordinació
+- **Planificació:** Identificar objectiu (què fer, com, quan i on).  
+- **Organització:** Indicar qui, quant temps i com realitzarà cada tasca.  
+- **Direcció:** Líder influent i responsable que coordini totes les actuacions.  
+- **Control:** Supervisió i control d'objectius marcats als diferents departaments.  
+- **Dotació de personal:** Contractació de personal adequat.  
+- **Coordinació:** Integració i sincronització d’esforços.  
 
 ::::
 
@@ -55,15 +57,15 @@ organització per assolir els objectius proposats.
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-15
+:data-release: 2025-09-20
 
-Un ERP integra processos empresarials (producció, vendes, distribució, compres, finances).  
+Els **ERP** són sistemes d’informació gerencial que integren i gestionen processos de producció i distribució.  
 
-**Exemples destacats:**
-- Apache OFBiz (Java, open source, llicència Apache 2.0).  
-- Kuali (educació superior, llicència AGPL).  
-- Openbravo (Java + PostgreSQL, punt de venda).  
-- Odoo (Python, modular, comunitari LGPL i enterprise propietària).
+**Exemples del llistat:**
+- **Apache OFBiz:** Java, Javascript, Groovy; llicència Apache 2.0, Open Source.  
+- **Kuali:** ERP per institucions d’educació superior; Java; llicència AGPL.  
+- **Openbravo:** ERP i punt de venda; Java + PostgreSQL/Oracle; llicència OBPL.  
+- **Odoo:** Gestió empresarial modular (CRM, comerç electrònic, facturació...); Python + XML; LGPL per comunitat, Enterprise propietària.  
 
 ::::
 
@@ -76,11 +78,14 @@ Un ERP integra processos empresarials (producció, vendes, distribució, compres
 :animate: fade-in
 :data-release: 2025-09-22
 
-Un CRM és un sistema per gestionar la relació amb els clients.  
+Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb els clients, amb dues parts:  
+- Lògica operacional (tasques).  
+- Lògica analítica (explotació de dades).  
+
 **Exemples:**  
-- Capsule CRM (SaaS, Java, MySQL).  
-- SugarCRM (PHP, multiplataforma, BD variades).  
-- Base CRM (Ruby on Rails, apps mòbils, MySQL).
+- **Capsule CRM** (SaaS, MySQL, Java, Javascript).  
+- **SugarCRM** (PHP, multiplataforma, BD: MySQL, SQL Server, Oracle; SaaS o propietari).  
+- **Base CRM** (Ruby on Rails, Python; apps mòbils; SaaS).  
 
 ::::
 
@@ -92,10 +97,12 @@ Un CRM és un sistema per gestionar la relació amb els clients.
 :animate: fade-in
 :data-release: 2025-09-22
 
-Odoo utilitza l’arquitectura **Model–Vista–Controlador**:  
-- **Model:** dades en taules PostgreSQL (ORM).  
-- **Vista:** interfície definida amb XML.  
-- **Controlador:** objectes en Python que gestionen la lògica.
+L’arquitectura d’Odoo és **Model–Vista–Controlador (MVC)**.  
+- **Model:** Taules PostgreSQL (ORM).  
+- **Vista:** Definida amb XML.  
+- **Controlador:** Objectes Python que processen peticions i dades.  
+
+El framework **OpenObject** facilita crear i ampliar mòduls seguint MVC.  
 
 ::::
 
@@ -107,12 +114,12 @@ Odoo utilitza l’arquitectura **Model–Vista–Controlador**:
 :animate: fade-in
 :data-release: 2025-09-29
 
-- Instal·lació en màquina virtual.  
-- Instal·lació amb paquets gràfics.  
-- Instal·lació personalitzada des de codi font.  
-- Accés online (SaaS).  
+- Instal·lació en **màquina virtual**.  
+- Instal·lació amb **paquets gràfics** (assistents).  
+- Instal·lació **personalitzada** des de codi font.  
+- **Accés online** (SaaS/demos).  
 
-Nosaltres treballarem amb **màquina virtual + personalitzada**.
+Nosaltres utilitzarem la **màquina virtual + personalitzada**.  
 
 ::::
 
@@ -124,10 +131,11 @@ Nosaltres treballarem amb **màquina virtual + personalitzada**.
 :animate: fade-in
 :data-release: 2025-09-29
 
-El mòdul base és el conjunt mínim per a què funcione Odoo.  
-Inclou:  
-- Mòdul **Empreses** (fitxes de clients).  
-- Mòdul **Administració** (seguretat i configuració bàsica).
+El **mòdul base** és el conjunt mínim perquè Odoo funcione.  
+
+Inclou:
+- **Empreses:** Fitxa de clients.  
+- **Administració:** Configuració i funcionalitat bàsica.  
 
 ::::
 
@@ -139,13 +147,13 @@ Inclou:
 :animate: fade-in
 :data-release: 2025-10-06
 
-- **Comptabilitat i finances** (integrat amb compres i vendes).  
-- **Compres, vendes i magatzem**.  
-- **Facturació**.  
-- **Gestió de personal (RRHH)**.  
-- **CRM**.  
+- **Gestió comptable i financera** (integrada amb compres i vendes).  
+- **Compres, vendes i magatzem.**  
+- **Facturació.**  
+- **Gestió de personal (RRHH).**  
+- **CRM.**  
 
-Tots estan interrelacionats i comparteixen informació en temps real.
+Els mòduls estan interconnectats i comparteixen informació.  
 
 ::::
 
@@ -157,8 +165,9 @@ Tots estan interrelacionats i comparteixen informació en temps real.
 :animate: fade-in
 :data-release: 2025-10-06
 
-La localització defineix normativa fiscal, idiomes, impostos i documents oficials.  
-Exemple: l’IVA a Espanya (21%) i França (20%) és diferent, i l’ERP ha d’adaptar-se.
+La **localització** configura normativa fiscal, idioma, impostos i documents oficials.  
+
+Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les factures serien errònies.  
 
 ::::
 
@@ -175,14 +184,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (release) {
       const rDate = new Date(release);
       if (today < rDate) {
-        el.innerHTML = "<p><em>La solució estarà disponible a partir del " + rDate.toLocaleDateString() + ".</em></p>";
+        el.innerHTML = "<p><em>La solució estarà disponible a partir del "
+          + rDate.toLocaleDateString() + ".</em></p>";
       }
     }
   });
 });
 </script>
 ```
-
 
 ```{toctree}
 :maxdepth: 2
