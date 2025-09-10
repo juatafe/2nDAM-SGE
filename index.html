@@ -543,19 +543,15 @@ El <strong>framework d’Odoo</strong> (anomenat <em>OpenObject</em>, de tipus R
 </ul>
 <pre  class="mermaid">
         flowchart LR
-    Controller[Controlador] --&gt; Model[Model&lt;br/&gt;(Dades/ORM)]
-    Controller --&gt; View[Vista&lt;br/&gt;(XML)]
+    Controller --&gt; Model
+    Controller --&gt; View
     Model --&gt; Controller
     View --&gt; Controller
+    Model --&gt; View
 
-    %% estils
-    Controller:::c
-    Model:::m
-    View:::v
-
-    classDef c fill=#ffebcc,stroke=#d4a017,stroke-width=2px;
-    classDef m fill=#d6eaf8,stroke=#2980b9,stroke-width=2px;
-    classDef v fill=#d5f5e3,stroke=#27ae60,stroke-width=2px;
+    Model[Model&lt;br/&gt;Dades / ORM]
+    View[Vista&lt;br/&gt;XML]
+    Controller[Controlador&lt;br/&gt;Python]
 
     </pre></div>
 </details></section>
