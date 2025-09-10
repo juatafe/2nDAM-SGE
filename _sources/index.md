@@ -35,7 +35,7 @@ Per això en aquest mòdul utilitzarem **Odoo Community 16** com a referència.
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-20
+<span class="release-date" data-release="2025-09-29"></span>
 
 Podríem definir la **gestió empresarial** com l'habilitat per organitzar, controlar i dirigir
 una empresa o organització per assolir els objectius proposats utilitzant diverses estratègies.
@@ -57,7 +57,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-20
+<span class="release-date" data-release="2025-09-29"></span>
 
 Els **ERP** són sistemes d’informació gerencial que integren i gestionen processos de producció i distribució.  
 
@@ -76,7 +76,7 @@ Els **ERP** són sistemes d’informació gerencial que integren i gestionen pro
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-22
+<span class="release-date" data-release="2025-09-29"></span>
 
 Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb els clients, amb dues parts:  
 - Lògica operacional (tasques).  
@@ -95,7 +95,7 @@ Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb 
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-22
+<span class="release-date" data-release="2025-09-29"></span>
 
 L’arquitectura d’Odoo és **Model–Vista–Controlador (MVC)**.  
 - **Model:** Taules PostgreSQL (ORM).  
@@ -112,7 +112,7 @@ El framework **OpenObject** facilita crear i ampliar mòduls seguint MVC.
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-29
+<span class="release-date" data-release="2025-09-29"></span>
 
 - Instal·lació en **màquina virtual**.  
 - Instal·lació amb **paquets gràfics** (assistents).  
@@ -129,7 +129,7 @@ Nosaltres utilitzarem la **màquina virtual + personalitzada**.
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-09-29
+<span class="release-date" data-release="2025-09-29"></span>
 
 El **mòdul base** és el conjunt mínim perquè Odoo funcione.  
 
@@ -145,7 +145,7 @@ Inclou:
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-10-06
+<span class="release-date" data-release="2025-09-29"></span>
 
 - **Gestió comptable i financera** (integrada amb compres i vendes).  
 - **Compres, vendes i magatzem.**  
@@ -163,7 +163,7 @@ Els mòduls estan interconnectats i comparteixen informació.
 
 ::::{dropdown} Solució
 :animate: fade-in
-:data-release: 2025-10-06
+<span class="release-date" data-release="2025-09-29"></span>
 
 La **localització** configura normativa fiscal, idioma, impostos i documents oficials.  
 
