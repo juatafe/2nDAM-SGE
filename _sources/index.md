@@ -173,7 +173,6 @@ Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les fact
 
 ---
 
-## Script per retardar la publicació
 
 ```{raw} html
 <script>
