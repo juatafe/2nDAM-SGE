@@ -35,7 +35,7 @@ Per això en aquest mòdul utilitzarem **Odoo Community 16** com a referència.
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 Podríem definir la **gestió empresarial** com l'habilitat per organitzar, controlar i dirigir
 una empresa o organització per assolir els objectius proposats utilitzant diverses estratègies.
@@ -57,7 +57,7 @@ una empresa o organització per assolir els objectius proposats utilitzant diver
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 Els **ERP** són sistemes d’informació gerencial que integren i gestionen processos de producció i distribució.  
 
@@ -76,7 +76,7 @@ Els **ERP** són sistemes d’informació gerencial que integren i gestionen pro
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb els clients, amb dues parts:  
 - Lògica operacional (tasques).  
@@ -95,14 +95,27 @@ Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb 
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-10"></span>
 
-L’arquitectura d’Odoo és **Model–Vista–Controlador (MVC)**.  
-- **Model:** Taules PostgreSQL (ORM).  
-- **Vista:** Definida amb XML.  
-- **Controlador:** Objectes Python que processen peticions i dades.  
+L’arquitectura d’Odoo és de tipus **Model–Vista–Controlador (MVC)**.  
+Això vol dir que es separa la lògica d’aplicació de la interfície gràfica a través d’un controlador, 
+fet que permet modificar o ampliar mòduls sense afectar la resta del sistema.  
 
-El framework **OpenObject** facilita crear i ampliar mòduls seguint MVC.  
+- **Model:** s’encarrega de les dades (taules PostgreSQL via ORM).  
+- **Controlador:** gestiona peticions dels usuaris, sol·licita dades al model i les envia a la vista.  
+- **Vista:** representació gràfica definida en XML.  
+
+```{mermaid}
+flowchart LR
+    Controller --> Model
+    Controller --> View
+    Model --> Controller
+    View --> Controller
+
+    Model[Model<br/>Dades / ORM]
+    View[Vista<br/>XML]
+    Controller[Controlador<br/>Python]
+```
 
 ::::
 
@@ -112,7 +125,7 @@ El framework **OpenObject** facilita crear i ampliar mòduls seguint MVC.
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 - Instal·lació en **màquina virtual**.  
 - Instal·lació amb **paquets gràfics** (assistents).  
@@ -129,7 +142,7 @@ Nosaltres utilitzarem la **màquina virtual + personalitzada**.
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 El **mòdul base** és el conjunt mínim perquè Odoo funcione.  
 
@@ -145,7 +158,7 @@ Inclou:
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 - **Gestió comptable i financera** (integrada amb compres i vendes).  
 - **Compres, vendes i magatzem.**  
@@ -163,7 +176,7 @@ Els mòduls estan interconnectats i comparteixen informació.
 
 ::::{dropdown} Solució
 :animate: fade-in
-<span class="release-date" data-release="2025-09-29"></span>
+<span class="release-date" data-release="2025-09-18"></span>
 
 La **localització** configura normativa fiscal, idioma, impostos i documents oficials.  
 
@@ -173,24 +186,6 @@ Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les fact
 
 ---
 
-
-```{raw} html
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const today = new Date();
-  document.querySelectorAll("details.dropdown").forEach(el => {
-    const release = el.getAttribute("data-release");
-    if (release) {
-      const rDate = new Date(release);
-      if (today < rDate) {
-        el.innerHTML = "<p><em>La solució estarà disponible a partir del "
-          + rDate.toLocaleDateString() + ".</em></p>";
-      }
-    }
-  });
-});
-</script>
-```
 
 ```{toctree}
 :maxdepth: 2
