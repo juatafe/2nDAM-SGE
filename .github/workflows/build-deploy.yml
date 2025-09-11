@@ -85,7 +85,7 @@ jobs:
           context: .
           file: .ci/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/2ndam-sge:latest
+          tags: ${{ needs.check-image.outputs.image_tag }}
 
   build-deploy:
     needs: [check-image, build-container]
