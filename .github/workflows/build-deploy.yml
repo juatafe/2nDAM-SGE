@@ -7,7 +7,7 @@ on:
 
 # Necessitem WRITE per a fer push a gh-pages 
 permissions:
-  contents: write 
+  contents: write
   packages: write
 
 concurrency:
@@ -76,8 +76,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}           # opcionalment: 'juatafe'
-          password: ${{ secrets.GITHUB_TOKEN }}   # o CR_PAT si ho prefereixes
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
 
       - name: Build and push image
         uses: docker/build-push-action@v6
@@ -85,7 +85,7 @@ jobs:
           context: .
           file: .ci/Dockerfile
           push: true
-          tags: ${{ needs.check-image.outputs.image_tag }}
+          tags: ghcr.io/${{ github.repository_owner }}/2ndam-sge:latest
 
   build-deploy:
     needs: [check-image, build-container]
@@ -104,6 +104,12 @@ jobs:
           python -m pip install -U pip wheel
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
+
+      - name: Internacionalització (i18n) - Generar fitxers gettext i compilar traduccions
+        run: |
+          sphinx-build -b gettext docs docs/_build/gettext
+          sphinx-intl update -p docs/_build/gettext -l ca
+          sphinx-intl build
 
       - name: Build HTML
         run: sphinx-build -b html docs docs/_build/html
