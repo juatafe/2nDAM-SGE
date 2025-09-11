@@ -8,6 +8,10 @@ project = "Sistemes de Gestió Empresarial"
 author = "Juan Bautista Talens"
 language = "ca"
 
+# ----- i18n -----
+locale_dirs = ['_locale']      # carpeta on viuran les traduccions
+gettext_compact = False        # manté un .po per fitxer
+
 # ──────────────── Extensions ────────────────
 extensions = [
     "myst_parser",
@@ -30,6 +34,7 @@ html_static_path = ["_static"]
 # afegir script JS
 html_js_files = [
     "release_control.js",
+    "i18n-fixes.js",
 ]
 templates_path = ["_templates"]
 # Logos i favicon (com ja tenies)

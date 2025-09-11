@@ -87,7 +87,75 @@ digraph G {
 ```
 ---
 
-## Introducció a Odoo i als sistemes ERP
+## 2 Evolució de la informàtica de gestió empresarial
+
+El terme **Sistemes d’Informació (SI)** és genèric i pot tindre diferents significats:
+
+- **En informàtica:** qualsevol sistema o subsistema de telecomunicacions o computació interconnectat per a obtindre, emmagatzemar, manipular, administrar, transmetre o rebre dades i veu. Inclou tant el programari com el maquinari.
+- **En teoria de sistemes:** un sistema (manual o automatitzat) format per persones, màquines i mètodes organitzats per a la recol·lecció, processament i transmissió de dades que representen informació per a l’usuari.
+
+---
+
+## Tipus de sistemes d’informació
+
+Segons la funció o l’usuari final (Laudon & Laudon, 2004):
+
+* **TPS (Transaction Processing Systems).** Gestionen la informació de les transaccions d’una empresa.  
+* **MIS (Management Information Systems).** Orientats a solucionar problemes generals de gestió.  
+* **DSS (Decision Support Systems).** Analitzen variables de negoci per a donar suport a la presa de decisions.  
+* **EIS (Executive Information Systems).** Per a directius: monitoren l’estat de les variables internes i externes d’una unitat de l’empresa.  
+* **OAS (Office Automation Systems).** Aplicacions per a facilitar el treball diari administratiu.  
+* **SE (Sistemes Experts).** Emulen el comportament d’un expert en un domini concret.  
+* **ERP (Enterprise Resource Planning).** Integren informació i processos de tota l’organització en un únic sistema.
+
+
+```{image} /_static/assets/img/Tema1/img2_T1.png
+:alt: Tipus de sistemes d'Informació
+:width: 65%
+:align: center
+```
+---
+
+## Evolució històrica dels SI en l’empresa
+
+```{image} /_static/assets/img/Tema1/img3_T1.png
+:alt: Evolució històrica dels SI
+:width: 100%
+:align: center
+```
+
+---
+
+# Organització d’una empresa i els seus entorns
+
+L’**entorn de l’empresa** està format per tots els elements i factors externs que poden influir en el seu funcionament. Es distingeixen dos tipus:
+
+## Macroentorn
+Factors que afecten totes les empreses:  
+- Tecnològics  
+- Jurídics  
+- Demogràfics  
+- Socioculturals  
+- Econòmics  
+
+```{image} /_static/assets/img/Tema1/img4_T1.png
+:alt: Quadre macro i microentorn
+:width: 65%
+:align: center
+```
+
+## Microentorn
+Factors que afecten individualment una empresa:  
+- Proveïdors  
+- Clients  
+- Intermediaris  
+- Competidors  
+
+---
+
+
+
+## 3 Introducció a Odoo i als sistemes ERP
 
 Els **ERP (Enterprise Resource Planning)** són programes de **gestió empresarial integrada**.  
 Permeten unificar en una sola plataforma àrees com:
@@ -146,181 +214,152 @@ Odoo destaca per:
 
 ---
 
-## Exercicis
 
-### 1. Què és la gestió empresarial? Quins objectius té?
+# Concepte d’ERP (Sistemes de planificació de recursos empresarials)
 
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
+Un **ERP** és un sistema de planificació creat per reduir temps de resposta, optimitzar la qualitat, millorar la gestió d’actius i reduir costos, integrant processos de negoci de manera unificada.  
 
-Podríem definir la **gestió empresarial** com l'habilitat per organitzar, controlar i dirigir
-una empresa o organització per assolir els objectius proposats utilitzant diverses estratègies.
+Funcionalitats principals:  
+- Ordres de compra, facturació, inventari, comptabilitat.  
+- Processos modulars i integrats.  
+- Universalitat i estandardització.  
 
-**Objectius principals:**
-- **Planificació:** Identificar objectiu (què fer, com, quan i on).  
-- **Organització:** Indicar qui, quant temps i com realitzarà cada tasca.  
-- **Direcció:** Líder influent i responsable que coordini totes les actuacions.  
-- **Control:** Supervisió i control d'objectius marcats als diferents departaments.  
-- **Dotació de personal:** Contractació de personal adequat.  
-- **Coordinació:** Integració i sincronització d’esforços.  
-
-::::
-
----
-
-### 2. Què entens per ERP i què gestiona en una empresa?  
-[Fes un resum de paquets ERP](https://en.wikipedia.org/wiki/List_of_ERP_software_packages).
-
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
-
-Els **ERP** són sistemes d’informació gerencial que integren i gestionen processos de producció i distribució.  
-
-**Exemples del llistat:**
-- **Apache OFBiz:** Java, Javascript, Groovy; llicència Apache 2.0, Open Source.  
-- **Kuali:** ERP per institucions d’educació superior; Java; llicència AGPL.  
-- **Openbravo:** ERP i punt de venda; Java + PostgreSQL/Oracle; llicència OBPL.  
-- **Odoo:** Gestió empresarial modular (CRM, comerç electrònic, facturació...); Python + XML; LGPL per comunitat, Enterprise propietària.  
-
-::::
+```{image} /_static/assets/img/Tema1/img5_T1.png
+:alt: Concepte d'ERP
+:width: 65%
+:align: center
+```
+## Característiques dels ERP
+- **Integrals:** controlen tots els processos i eviten duplicitats.  
+- **Modulars:** cada funcionalitat està dividida en mòduls (Vendes, Finances, Magatzem, etc.).  
+- **Adaptables:** es configuren segons les necessitats de cada empresa.  
 
 ---
 
-### 3. Què és un CRM?  
-[Fes un resum de sistemes CRM](https://en.wikipedia.org/wiki/Comparison_of_CRM_systems).
-
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
-
-Un **CRM** és un sistema d’informació que ajuda a gestionar la relació amb els clients, amb dues parts:  
-- Lògica operacional (tasques).  
-- Lògica analítica (explotació de dades).  
-
-**Exemples:**  
-- **Capsule CRM** (SaaS, MySQL, Java, Javascript).  
-- **SugarCRM** (PHP, multiplataforma, BD: MySQL, SQL Server, Oracle; SaaS o propietari).  
-- **Base CRM** (Ruby on Rails, Python; apps mòbils; SaaS).  
-
-::::
-
----
-
-### 4. Descriu l’arquitectura MVC d’Odoo.
-
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-10"></span>
-
-L’arquitectura d’Odoo és de tipus **Model–Vista–Controlador (MVC)**.  
-Això vol dir que, utilitzant aquest patró de tres components, es pot separar la lògica d’aplicació de la lògica de vista (interfície gràfica) a través d’un controlador.  
-
-Aquesta separació permet modificar o personalitzar parts de l’aplicació sense afectar la resta del sistema.  
-El **framework d’Odoo** (anomenat *OpenObject*, de tipus RAD) permet ampliar ràpidament Odoo amb mòduls mitjançant la capa ORM, i facilita diversos components que permeten construir l’aplicació seguint l’arquitectura MVC.  
-
-- **Model:** s’encarrega de les dades (ORM i taules PostgreSQL).  
-- **Vista:** representació gràfica (XML).  
-- **Controlador:** rep peticions, sol·licita dades al model i les envia a la vista.  
-
-
-```{mermaid}
-flowchart TB
-    Controller[Controlador]
-
-    subgraph row[" "]
-        Model[Model]
-        View[Vista]
-    end
-
-    Controller --> Model
-    Controller --> View
-    View -.-> Controller
-    Model -.-> View
-    View --> Model
-
-    Model[Model<br/>Dades / ORM]
-    View[Vista<br/>XML]
-    Controller[Controlador<br/>Python]
+## Avantatges i inconvenients
+Els ERP ofereixen grans beneficis, però també inconvenients (costos, complexitat, necessitat de formació).  
 
 ```
+{image} /_static/assets/img/Tema1/img6_T1.png
+:alt: Avantatges i inconvenients ERP
+:width: 80%
+:align: center
+```
+---
 
-::::
+## ERP actuals i llicències
+
+Dins del mercat hi ha ERP **privatius** (SAP, Oracle, Microsoft) i ERP **lliures** (Odoo, Openbravo).  
+- **Privatius:** llicència de pagament, orientats a grans empreses.  
+- **Lliures:** sense cost de llicència, amb comunitats de desenvolupadors i serveis opcionals.  
+
+```{image} /_static/assets/img/Tema1/img7_T1.png
+:alt: ERP actuals i llicències
+:width: 60%
+:align: center
+```
+[ERP a la Viquipèdia](https://en.wikipedia.org/wiki/list_of_erp_software_packages)  
+[Informe anual del mercat ERP](http://www.gartner.com/technology/home.jsp/)
 
 ---
 
-### 5. Explica les diferents formes d’instal·lar un ERP. Quina utilitzarem nosaltres?
+## Exemples d’ERP
 
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
+### SAP
+Suite de programes integrats (finances, producció, logística, recursos humans). Basada en la plataforma NetWeaver.  
 
-- Instal·lació en **màquina virtual**.  
-- Instal·lació amb **paquets gràfics** (assistents).  
-- Instal·lació **personalitzada** des de codi font.  
-- **Accés online** (SaaS/demos).  
+### Oracle
+Família de productes (JD Edwards, PeopleSoft) amb llarga trajectòria en ERP i bases de dades.  
 
-Nosaltres utilitzarem la **màquina virtual + personalitzada**.  
+### Microsoft
+**Dynamics ERP** (NAV, AX, GP, SL), orientat a empreses mitjanes i divisions de grans companyies.  
 
-::::
+### Openbravo
+ERP lliure basat en web, modular i extensible, amb integració amb altres aplicacions lliures.  
+
+### Odoo (antic OpenERP)
+ERP lliure i modular, amb una gran comunitat i múltiples mòduls (CRM, projectes, compres, vendes, magatzem, fabricació, comptabilitat…).  
+
+```{image} /_static/assets/img/Tema1/img8_T1.png
+:alt: Logo Odoo
+:width: 25%
+:align: center
+```
+---
+
+# Concepte de CRM (Gestió de les relacions amb clients)
+
+Els **CRM** donen suport a la gestió de les relacions amb clients, vendes i màrqueting.  
+- Part **operacional:** registre i gestió de contactes i activitats.  
+- Part **analítica:** anàlisi de dades per a millorar les decisions.  
+
+```{image} /_static/assets/img/Tema1/img9_T1.png
+:alt: Concepte de CRM
+:width: 80%
+:a`ign: center
+```
+
+[CRM a la Viquipèdia](http://en.wikipedia.org/wiki/comparison_of_crm_systems)  
+[Què és un CRM?](http://es.slideshare.net/alfredovela/qu-es-un-crm-utilidad-y-software)
 
 ---
 
-### 6. Què entenem per mòdul base? Quins components en formen part en Odoo?
+# Arquitectura d’un sistema ERP-CRM
 
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
+Els ERP actuals integren tots els elements interns i externs d’una empresa, recullen i processen informació i la presenten a diferents nivells.  
 
-El **mòdul base** és el conjunt mínim perquè Odoo funcione.  
+Odoo (antic OpenERP) utilitza **OpenObject**, un framework RAD amb arquitectura **MVC** i capa **ORM** sobre PostgreSQL.  
 
-Inclou:
-- **Empreses:** Fitxa de clients.  
-- **Administració:** Configuració i funcionalitat bàsica.  
+Característiques:  
+- ORM que gestiona models i dades.  
+- Arquitectura multi-tenant.  
+- Workflows i dissenyadors d’informes.  
+- Traducció multilingüe.  
+- Client web i API XML-RPC/JSON-RPC.  
 
-::::
+```{image} /_static/assets/img/Tema1/img10_T1.png
+:alt: Arquitectura ERP-CRM
+:width: 100%
+:align: center
+```
 
----
+```{image} /_static/assets/img/Tema1/img11_T1.png
+:alt: Client-Servidor Odoo
+:width: 100%
+:align: center
+```
 
-### 7. Nomena els tipus de mòduls que podem instal·lar en un ERP i com es relacionen.
-
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
-
-- **Gestió comptable i financera** (integrada amb compres i vendes).  
-- **Compres, vendes i magatzem.**  
-- **Facturació.**  
-- **Gestió de personal (RRHH).**  
-- **CRM.**  
-
-Els mòduls estan interconnectats i comparteixen informació.  
-
-::::
-
----
-
-### 8. Per què és important la localització del país en un ERP?
-
-::::{dropdown} Solució
-:animate: fade-in
-<span class="release-date" data-release="2025-09-18"></span>
-
-La **localització** configura normativa fiscal, idioma, impostos i documents oficials.  
-
-Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les factures serien errònies.  
-
-::::
+```{image} /_static/assets/img/Tema1/img12_T1.png
+:alt: Components Odoo
+:width: 50%
+:align: center
+```
 
 ---
 
+# Tipus de llicències de programari
+
+En el mercat existeixen dos grans grups: **programari privatiu** i **programari lliure**.  
+- **Privatiu:** cal pagar llicència i manteniment, les actualitzacions estan garantides pel proveïdor.  
+- **Lliure:** sense cost de llicència, però depén de la comunitat per a actualitzacions i correccions.  
+
+Avantatges del programari lliure:  
+- Cost zero de llicència i actualitzacions.  
+- Gran comunitat i documentació.  
+- Varietat d’ERP lliures (Odoo, Openbravo…).  
+
+Openbravo (espanyol): [Web oficial](http://www.openbravo.com/es)  
+Odoo (belga): [Web oficial](https://www.odoo.com/es_es/)
+
+
+---
 
 ```{toctree}
 :maxdepth: 2
-:caption: Continguts
+:caption: Tema 1
 
+index
 situacio
-informe
+Exercicis1
 ```
 
