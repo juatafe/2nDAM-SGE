@@ -22,12 +22,10 @@ jobs:
           cache: 'pip'
           cache-dependency-path: requirements.txt
 
-      - name: System deps (si tens apt-packages.txt)
+      - name: System deps
         run: |
-          if [ -f apt-packages.txt ]; then
-            sudo apt-get update
-            xargs -r sudo apt-get install -y < apt-packages.txt
-          fi
+          sudo apt-get update
+          sudo apt-get install -y graphviz
 
       - name: Python deps
         run: |

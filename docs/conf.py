@@ -15,12 +15,16 @@ gettext_compact = False        # manté un .po per fitxer
 # ──────────────── Extensions ────────────────
 extensions = [
     "myst_parser",
+    "sphinx.ext.graphviz",      # 👈 afegeix açò
     "sphinx_copybutton",
     "sphinx.ext.imgconverter",
     "sphinx_design",
-    "sphinxcontrib.mermaid",
-    "sphinx.ext.graphviz", 
+    "sphinxcontrib.mermaid",    # si el fas servir, deixa-ho; si no, comenta-ho
 ]
+
+# (Opcional però recomanat per a HTML)
+graphviz_output_format = "svg"
+graphviz_dot_args = ["-Gbgcolor=transparent"]
 
 myst_enable_extensions = ["colon_fence", "attrs_block", "deflist"]
 myst_heading_anchors = 3
