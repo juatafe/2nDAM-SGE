@@ -358,7 +358,7 @@ Odoo (belga): [Web oficial](https://www.odoo.com/es_es/)
 :maxdepth: 2
 :caption: Tema 1
 
-index
+self
 situacio
 Exercicis1
 ```
