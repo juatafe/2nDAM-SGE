@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_image: ${{ steps.out.outputs.has_image }}
-      dockerfile_changed: ${{ steps.diff.outputs.dockerfile_changed }}
+      dockerfile_changed: ${{ steps.diff.outputs.dockerfile }}  # ⬅️ FIX
       needs_build: ${{ steps.compute.outputs.needs_build }}
       image_tag: ${{ steps.compute.outputs.image_tag }}
     steps:
@@ -32,10 +32,17 @@ jobs:
           IMAGE_NAME=$(echo "$REPO_NAME" | tr '[:upper:]' '[:lower:]')
           echo "image_tag=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/${IMAGE_NAME}:latest" >> "$GITHUB_OUTPUT"
 
+      - name: Log in to GHCR (read)  # ⬅️ NOU: evita falsos negatius si la imatge és privada
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Check if image exists on GHCR
         id: out
         run: |
-          if docker manifest inspect ${{ steps.prep.outputs.image_tag }} > /dev/null 2>&1; then
+          if docker manifest inspect "${{ steps.prep.outputs.image_tag }}" > /dev/null 2>&1; then
             echo "has_image=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_image=false" >> "$GITHUB_OUTPUT"
@@ -65,12 +72,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Log in to GitHub Container Registry
+      - name: Log in to GitHub Container Registry (push)
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: juatafe
-          password: ${{ secrets.CR_PAT }}
+          username: ${{ github.actor }}           # opcionalment: 'juatafe'
+          password: ${{ secrets.GITHUB_TOKEN }}   # o CR_PAT si ho prefereixes
 
       - name: Build and push image
         uses: docker/build-push-action@v6
@@ -87,13 +94,14 @@ jobs:
     container:
       image: ${{ needs.check-image.outputs.image_tag }}
       credentials:
-        username: juatafe
-        password: ${{ secrets.CR_PAT }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}   # o CR_PAT
     steps:
       - uses: actions/checkout@v4
 
       - name: Install extra Python deps
         run: |
+          python -m pip install -U pip wheel
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
 
