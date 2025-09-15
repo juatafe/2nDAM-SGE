@@ -162,3 +162,5 @@ Els mòduls estan interconnectats i comparteixen informació.
 La **localització** configura normativa fiscal, idioma, impostos i documents oficials.  
 
 Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les factures serien errònies.
+
+![Exemple](../assets/img/exemple.png)
