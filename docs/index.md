@@ -3,7 +3,7 @@
 
 La **gestió empresarial** és la ciència social que té per objecte l’estudi de les organitzacions i la tècnica encarregada de la **planificació, organització, direcció i control** dels recursos (humans, financers, materials, tecnològics, coneixement, etc.) d’una organització, per obtenir eficiència o el màxim benefici possible.  
 
-Aquest benefici pot ser **social, econòmic o estratègic**, depenent dels fins perseguits per l’organització.
+Aquest benefici pot ser **social, econòmic o estratègic**, depenent dels fins perseguits per l’organització. 
 
 ---
 
@@ -296,7 +296,7 @@ Els **CRM** donen suport a la gestió de les relacions amb clients, vendes i mà
 ```{image} /_static/assets/img/Tema1/img9_T1.png
 :alt: Concepte de CRM
 :width: 80%
-:a`ign: center
+:align: center
 ```
 
 [CRM a la Viquipèdia](http://en.wikipedia.org/wiki/comparison_of_crm_systems)  

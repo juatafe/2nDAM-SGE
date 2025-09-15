@@ -65,7 +65,7 @@ pdf_url = f"pdf/{site_slug}.pdf"
 
 # ──────────────── Opcions per tema (cada tema entén les seues) ────────────────
 _book_opts = {
-    "logo_only": False,  # mostra nom i logo
+    #"logo_only": False,  # mostra nom i logo
     "repository_url": "https://github.com/juatafe/2nDAM-SGE",
     "use_repository_button": True,
     "use_issues_button": True,
