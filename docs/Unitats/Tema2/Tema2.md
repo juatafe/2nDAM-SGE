@@ -21,7 +21,7 @@ Configurar la xarxa en Ubuntu Server 22.04
 Abans de començar el procés d’instal·lació hem de tindre el sistema actualitzat, per a no tindre problemes posteriors i poder descarregar i instal·lar tots els paquets necessaris per a Odoo.
 
 
-```
+```bash
 sudo apt-get update
 sudo apt-get dist-upgrade
 ```
@@ -29,16 +29,16 @@ sudo apt-get dist-upgrade
 2. Creació de l’usuari base:
 Anem a crear l’usuari bàsic de Linux per a fer funcionar Odoo, ja que per seguretat no es recomana executar Odoo com a root.
 Aquest usuari tindrà com a home el directori /opt/odoo i com a intèrpret de comandes /bin/bash, i li posarem contrasenya.
-```
+```bash
 sudo adduser --system --quiet --shell=/bin/bash --home=/opt/odoo --group odoo
 ```
 Opció –group per a posar el grup de l’usuari, el paràmetre -shell /bin/bash definint el terminal d’aquest usuari i --home=/opt/odoo per a definir on estarà el home de l’usuari. Li posem contrasenya per a poder accedir.
-```
+```bash
 sudo passwd odoo
 ```
 
 3. Instal·lació del gestor de base de dades i configuració:
-```
+```bash
 sudo apt-get install postgresql
 ```
 
@@ -47,29 +47,29 @@ Anem a crear un usuari a la base de dades per a treballar des d’Odoo:
 Forma 1:
 
 Creem l’usuari Odoo PostgreSQL i li assignem una contrasenya, aquest usuari i clau hem de tindre’ls presents perquè els usarem per a la configuració d’OdooERP amb PostgreSQL.
-```
+```bash
 sudo su - postgres -c "createuser -s odoo"
 ```
 
 Forma 2:
 
 Iniciem sessió amb l’usuari postgres:
-```
+```bash
 su postgres
 ```
 amb contrasenya postgres. Si l’usuari postgres no tinguera contrasenya, la posem amb:
-```
+```bash
 sudo passwd postgres
 ```
 Creem l’usuari:
- ```
+ ```sql
 createuser -sdP odoo
 ```
 4. Descàrrega d’Odoo 16.0: (Per a descarregar qualsevol altra versió d’Odoo cal indicar-la amb l’opció --branch)
 Com que el propietari de la ruta /opt/odoo és l’usuari de sistema odoo, accedim amb aquest usuari per a poder fer el procés d’instal·lació sense problemes i posteriorment poder utilitzar l’ERP.
 
 Entrem al directori /opt/odoo amb l’usuari odoo.
-```
+```bash
 su odoo
 cd /opt/odoo
 git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 --single-branch
@@ -93,7 +93,7 @@ git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 --single-bran
 * nodejs: entorn d’execució per a JavaScript.
 * apache2: servidor web.
 
-```
+```bash
 sudo apt-get install build-essential python3-pillow python3-lxml python3-dev python3-pip python3-setuptools libpq-dev npm nodejs git libldap2-dev libsasl2-dev libxml2-dev libxslt1-dev libjpeg-dev apache2 xfonts-75dpi xfonts-base libpq-dev libffi-dev fontconfig -y
 ```
 
@@ -103,18 +103,18 @@ Assegura’t que tot s’ha instal·lat correctament, ja que si falla alguna ins
 
 Actualitzem pip:
 
-```
+```bash
 pip3 install wheel setuptools pip --upgrade
 ```
 
 Instal·lem: 
-```
+```bash
 pip3 install -r /opt/odoo/odoo/requirements.txt
 
 ```
 
 Per veure les llibreries instal·lades:
-```
+```bash
 pip freeze
 ```
 (mostra el llistat instal·lat, que hauria de coincidir amb el requirements.txt)
@@ -124,17 +124,17 @@ NOTA:
 Si es presenten errors d’entorn de virtualització (python 3.12), convé fer la instal·lació en un entorn virtual:
 
 Canvia a l’usuari odoo i accedeix a la carpeta /opt/odoo, crea l’entorn:
-```
+```bash
 python3 -m venv odoo-venv16
 source odoo-venv16/bin/activate
 ```
 Ara, instal·la els requeriments pip d’Odoo 16 a l’entorn creat:
-```
+```bash
 pip3 install wheel setuptools pip --upgrade
 pip3 install -r /opt/odoo/odoo/requirements.txt
 ```
 Amb la instrucció deactivate ixes de l’entorn virtual:
-```
+```bash
 deactivate
 
 ```
@@ -153,13 +153,13 @@ a) Possibles errors:
 Si hi ha algun error perquè falten llibreries, pot ser que haja fallat la instal·lació (potser per problemes de connexió). Pots tornar a executar la instal·lació de les llibreries amb:
 
 
-```
+```bash
 sudo pip3 install -r /opt/odoo/odoo/requirements.txt 
 
 ```
 o instal·lar la llibreria que falta amb:
 
-```
+```bash
 sudo pip3 install libreria.
 
 ```
@@ -170,7 +170,7 @@ sudo pip3 install libreria.
 
 Per a poder generar informes en PDF des d’Odoo necessitem una llibreria que ho permeta. Instal·lem la llibreria de PDF per a la generació d’informes en aquest format.
 Descarreguem el fitxer wkhtmltox_0.12.6.1-2.jammy_amd64.deb i l’instal·lem. Una vegada instal·lat, creem els enllaços necessaris des de /usr/local/bin a /usr/bin tant del PDF com de la imatge.
-```
+```bash
 wget  https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb
 sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
 rm wkhtmltox_0.12.6.1-2 .jammy_amd64.deb
@@ -180,7 +180,7 @@ sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin/
 Problema amb les fonts: Si en el procés anterior fallen les dependències de les fonts, ho solucionarem instal·lant-les:
 
 
-```
+```bash
 sudo apt install xfonts-75dpi xfonts-base
 ```
 
@@ -190,7 +190,7 @@ Quan s’arranca, es para o es produeixen errors en els sistemes i serveis, la i
 Anem a crear la carpeta on es guardarà l’arxiu log d’Odoo, per a això crearem una carpeta anomenada odoo dins de la ruta predeterminada de logs d’Ubuntu, és a dir, /var/log/odoo/.
 Recorda que aquest procés només el podràs fer amb un usuari administrador, que pot ser root o l’usuari creat en el procés d’instal·lació.
 Modifiquem el propietari de la carpeta perquè l’usuari propietari siga odoo, però el grup propietari continue sent l’usuari que la va crear, així ens assegurem que es puguen guardar els arxius generats des d’Odoo.
-```
+```bash
 mkdir /var/log/odoo/
 chown odoo:root /var/log/odoo
 ```
@@ -204,7 +204,7 @@ Modifiquem els permisos del fitxer perquè el propietari tinga tots els permisos
 Editem el fitxer de configuració i modifiquem les dades perquè l’usuari de la base de dades siga odoo, sense contrasenya, així en treballar des d’Odoo podem accedir a la base de dades sense problemes. Indiquem la ruta d’addons, si apareix comentada la descomentem i posem la ruta on guardarà els logs.
 
 
-```
+```bash
 cp /opt/odoo/odoo/debian/odoo.conf /etc/odoo.conf
 chown odoo: /etc/odoo.conf
 chmod 640 /etc/odoo.conf
@@ -227,7 +227,7 @@ copiem odoo.service de la ruta /opt/odoo/odoo/debian/ a la ruta /etc/systemd/sys
 Activem el servei i ja està disponible per a ser parat, arrancat, veure el seu estat com a servei i comprovem que està correcte veient l’estat.
 
 
-```
+```bash
 sudo cp /opt/odoo/odoo/debian/odoo.service /etc/systemd/system/odoo.service
 sudo nano /etc/systemd/system/odoo.service
 ```
@@ -250,11 +250,11 @@ ExecStart=/opt/odoo/odoo-venv16/bin/python /opt/odoo/odoo/odoo-bin --config /etc
 :::
 
 Activar servei:
-```
+```bash
 sudo systemctl enable odoo.service
 ```
 Arrancar, parar i veure l’estat del servei:
-```
+```bash
 sudo systemctl start odoo
 sudo systemctl stop odoo
 sudo systemctl status odoo
