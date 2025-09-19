@@ -1,0 +1,3 @@
+# Pràctica 2: Exercicis de CI/CD
+
+Ací van les instruccions de la pràctica...
