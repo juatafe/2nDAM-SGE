@@ -402,3 +402,17 @@ http://IP_DEL_SERVIDOR:8069
 - **Protegeix el Database Manager:** és la contrasenya mestra que controla totes les operacions de gestió de bases de dades (crear, eliminar, fer còpies, restaurar, canviar noms…).
 - **No és la mateixa que l’usuari administrador (admin) dins de la base de dades:** aquesta contrasenya només serveix per accedir a la pantalla de gestió de BDs (`/web/database/manager`).
 - **Es pot canviar:** pots posar-ne una pròpia al camp Master Password de la pantalla que has vist. També pots modificar-la després al fitxer de configuració d’Odoo (`/etc/odoo/odoo.conf`), en la línia `admin_passwd = ...`.
+:::{tip}
+Si no carrega, comprova:
+- Estat del servei: `systemctl status odoo`
+- Logs: :file:`/var/log/odoo/odoo-server.log`
+- Port obert al firewall
+
+
+
+```{toctree}
+:maxdepth: 1
+:caption: Pràctiques
+
+Tema2_prac1
+```
