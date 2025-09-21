@@ -58,8 +58,8 @@ Abans de començar amb la instal·lació, necessitem preparar l'entorn de virtua
 
 **Descàrrega:**
 - Web oficial: https://ubuntu.com/download/server
-- Tria la versió 22.04 LTS (Long Term Support)
-- Fitxer: ubuntu-22.04.x-live-server-amd64.iso (aproximadament 1.4 GB)
+- Tria la versió 24.04 LTS (Long Term Support)
+- Fitxer: ubuntu-24.04.x-live-server-amd64.iso (aproximadament 1.4 GB)
 
 **Per què LTS?** Les versions LTS tenen suport durant 5 anys, ideals per a entorns de producció.
 :::
@@ -206,7 +206,7 @@ Després podràs usar:
 - `http://localhost:8069` per accedir a Odoo
 :::
 
-## Fase 3: Instal·lació d'Ubuntu Server 22.04
+## Fase 3: Instal·lació d'Ubuntu Server 24.04
 
 ### Pas 1: Muntar la ISO i iniciar la VM
 
