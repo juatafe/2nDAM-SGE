@@ -28,7 +28,7 @@
 ## Requisits previs
 
 Per mantindre la coherència amb la Pràctica 1, treballarem sobre el mateix entorn:
-  - Màquina virtual Ubuntu Server 22.04 LTS creada a la Pràctica 1.
+  - Màquina virtual Ubuntu Server 24.04 LTS creada a la Pràctica 1.
   - Torna a un estat net abans d’instal·lar Odoo manualment:
     - Recupera una instantània de VirtualBox guardada després de la instal·lació bàsica d’Ubuntu, abans de configurar Odoo.
     - O bé, fes una clonació de la màquina virtual i treballa sobre la còpia per a no perdre la configuració de la Pràctica 1.
