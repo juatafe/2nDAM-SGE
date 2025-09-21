@@ -737,13 +737,13 @@ docker compose exec web odoo -i nom_modul --test-enable --stop-after-init
 :class: note
 Per a configuracions més avançades, consulta aquests documents complementaris:
 
-**[Annex B: Operacions habituals amb Docker per a Odoo](Docker_Operations.md)**
+**[Annex B: Operacions habituals amb Docker per a Odoo](Annexos/Docker_Operations.md)**
 - Gestió avançada de contenidors i serveis
 - Scripts d'automatització professionals
 - Monitoratge de rendiment detallat
 - Gestió de repositoris Git i mòduls
 
-**[Annex C: Configuració avançada i producció d'Odoo](Configuracio_Avancada.md)**
+**[Annex C: Configuració avançada i producció d'Odoo](Annexos/Configuracio_Avancada.md)**
 - Seguretat multicapa (firewall, SSL/TLS, aplicació)
 - Optimització de PostgreSQL i Odoo per a producció
 - Monitoratge professional amb mètriques i alertes
@@ -786,7 +786,7 @@ Durant aquest procés has après:
 :class: note
 Per comprendre en detall què és CI/CD i com implementar-lo amb Odoo, consulta:
 
-**[Annex D: Integració i Desplegament Continu (CI/CD)](Annex_CICD.md)**
+**[Annex D: Integració i Desplegament Continu (CI/CD)](Annexos/Annex_CICD.md)**
 
 Aquest annex cobreix:
 - Conceptes fonamentals de CI/CD explicats de manera accessible

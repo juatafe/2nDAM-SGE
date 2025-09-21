@@ -59,7 +59,7 @@ Com a futur tècnic superior en **Desenvolupament d'Aplicacions Multiplataforma*
 :class: tip
 Redis és **opcional** per a entorns de desenvolupament amb 1-2 usuaris, però esdevé **imprescindible** en entorns de producció amb més de 10 usuaris concurrents. 
 
-Consulta l'**[Annex E: Redis](Annex_Redis.md)** per a una guia completa sobre quan i com implementar-lo.
+Consulta l'**[Annex E: Redis](Annexos/Annex_Redis.md)** per a una guia completa sobre quan i com implementar-lo.
 :::
 
 ## Metodologies de desplegament
@@ -361,27 +361,27 @@ Els següents annexos proporcionen configuracions avançades per a entorns profe
   - Docker Compose amb múltiples serveis
   - Gestió de volums i xarxes
 
-- **📖 [Annex A: Configuració d'Apache com a Reverse Proxy](Apache_ReverseProxy.md)**
+- **📖 [Annex A: Configuració d'Apache com a Reverse Proxy](Annexos/Apache_ReverseProxy.md)**
   - SSL/TLS amb certificats Let's Encrypt
   - Load balancing i alta disponibilitat
   - Configuració de seguretat avançada
 
-- **📖 [Annex B: Operacions avançades amb Docker](Docker_Operations.md)**
+- **📖 [Annex B: Operacions avançades amb Docker](Annexos/Docker_Operations.md)**
   - Monitoratge de contenidors i recursos
   - Backup i restauració automatitzada
   - Scaling i optimització de rendiment
 
-- **📖 [Annex C: Configuració avançada i producció d'Odoo](Configuracio_Avancada.md)**
+- **📖 [Annex C: Configuració avançada i producció d'Odoo](Annexos/Configuracio_Avancada.md)**
   - Optimització de PostgreSQL per a grans volums de dades
   - Configuració de workers i balanceig de càrrega
   - Diagnòstic i resolució de problemes comuns
 
-- **📖 [Annex D: Integració i Desplegament Continu (CI/CD)](Annex_CICD.md)**
+- **📖 [Annex D: Integració i Desplegament Continu (CI/CD)](Annexos/Annex_CICD.md)**
   - Automatització de desplegaments
   - Testing automàtic i integració contínua
   - DevOps per a entorns Odoo
 
-- **📖 [Annex E: Redis com a Cache i Broker de Missatges](Annex_Redis.md)**
+- **📖 [Annex E: Redis com a Cache i Broker de Missatges](Annexos/Annex_Redis.md)**
   - Implementació de Redis per a acceleració d'Odoo
   - Configuració optimitzada per a producció
   - Scripts de monitoratge i manteniment automàtic
@@ -440,7 +440,7 @@ graph LR
 **⚡ Optimització de rendiment:**
 - [Redis Best Practices](https://redis.io/docs/manual/patterns/)
 - [Odoo Performance Guidelines](https://www.odoo.com/documentation/16.0/administration/performance.html)
-- **[Annex E: Implementació Redis](Annex_Redis.md)** - Guia completa específica del curs
+- **[Annex E: Implementació Redis](Annexos/Annex_Redis.md)** - Guia completa específica del curs
 
 Aquest tema et proporciona una base sòlida per desenvolupar una carrera exitosa en l'àmbit de la tecnologia empresarial moderna! 🎯✨
 
@@ -454,9 +454,5 @@ Part1
 Tema2_prac1
 Part2
 Tema2_prac2
-Apache_ReverseProxy
-Docker_Operations
-Configuracio_Avancada
-Annex_CICD
-Annex_Redis
+Annexos/index
 ```
