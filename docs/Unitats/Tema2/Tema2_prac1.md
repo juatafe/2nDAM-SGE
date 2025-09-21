@@ -37,7 +37,7 @@ Aquests coneixements són fonamentals per treballar en entorns empresarials real
 
 **Programari necessari:**
 - VirtualBox 7.x o superior (gratuït)
-- ISO d'Ubuntu Server 22.04 LTS (descarrega gratuïta)
+- ISO d'Ubuntu Server 24.04 LTS (descarrega gratuïta)
 - Connexió a Internet estable
 
 **Coneixements previs:**
@@ -52,7 +52,7 @@ Abans de començar amb la instal·lació, necessitem preparar l'entorn de virtua
 
 ### Descàrrega del programari necessari
 
-:::{admonition} Ubuntu Server 22.04 LTS
+:::{admonition} Ubuntu Server 24.04 LTS
 :class: tip
 **Què és?** Ubuntu Server és la versió de Ubuntu optimitzada per a servidors, sense interfície gràfica i centrada en estabilitat i rendiment.
 
