@@ -196,7 +196,7 @@ Abans d'instal·lar Ubuntu, configurem la xarxa per poder accedir remotament:
 | SSH  | TCP      | 2222      | 22         |
 | Odoo | TCP      | 8069      | 8069       |
 
-```{image} /_static/assets/img/Tema2/redireccionament.png
+```{image} /_static/assets/img/Tema2/redericcionament.png
 :alt: Configurar socket de connexió. La MV sempre la mateixa ip assignada per NAT.
 :width: 60%
 :align: center
@@ -277,7 +277,7 @@ Un cop dins del sistema, executa:
 ```{code-block} bash
 sudo apt update && sudo apt upgrade -y
 ```
-Això actualitza el sistema amb les últimes correccions de seguretat.
+Això actualitza el sistema amb les últimes correccions de seguretat. En acabar serà un bon moment per crear una snapshot de la MV.
 :::
 
 ## Fase 4: Instal·lació d'Odoo 16
@@ -287,7 +287,7 @@ Això actualitza el sistema amb les últimes correccions de seguretat.
 Primer instal·lem les dependències necessàries:
 
 ```{code-block} bash
-# Actualitzar el sistema
+# Actualitzar el sistema si no ho has fet ja
 sudo apt update && sudo apt upgrade -y
 
 # Instal·lar PostgreSQL (base de dades)
