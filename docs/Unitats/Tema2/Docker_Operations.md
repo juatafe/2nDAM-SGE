@@ -919,7 +919,3 @@ Aquest annex proporciona una guia completa per a la gestió professional d'entor
 
 Amb aquestes operacions i scripts, la gestió diària d'Odoo amb Docker esdevé més eficient i menys propensa a errors.
 
-```{toctree}
-:maxdepth: 1
-
-```

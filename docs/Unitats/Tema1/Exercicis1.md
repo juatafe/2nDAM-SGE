@@ -1,4 +1,4 @@
-# Exercicis
+# ✍️ Exercicis
 
 ## Exercici 1. Què és la gestió empresarial? Quins objectius té?
 
@@ -163,4 +163,4 @@ La **localització** configura normativa fiscal, idioma, impostos i documents of
 
 Exemple: IVA Espanya 21% vs. França 20%. Sense localització correcta, les factures serien errònies.
 
-![Exemple](../assets/img/exemple.png)
+<!-- ![Exemple](assets/img/exemple.png) -->

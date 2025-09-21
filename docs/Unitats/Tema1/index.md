@@ -1,4 +1,14 @@
 # Tema 1. Identificació de sistemes ERP
+
+
+```{toctree}
+:maxdepth: 2
+:caption: Continguts del Tema 1
+:hidden:
+
+situacio
+exercicis1
+```
 ## 1. Introducció a la gestió empresarial
 
 La **gestió empresarial** és la ciència social que té per objecte l’estudi de les organitzacions i la tècnica encarregada de la **planificació, organització, direcció i control** dels recursos (humans, financers, materials, tecnològics, coneixement, etc.) d’una organització, per obtenir eficiència o el màxim benefici possible.  
@@ -351,14 +361,4 @@ Openbravo (espanyol): [Web oficial](http://www.openbravo.com/es)
 Odoo (belga): [Web oficial](https://www.odoo.com/es_es/)
 
 
----
-
-```{toctree}
-:maxdepth: 2
-:caption: Tema 1
-
-self
-situacio
-Exercicis1
-```
 

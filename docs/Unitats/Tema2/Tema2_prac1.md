@@ -1,4 +1,4 @@
-# Pràctica 1  
+# ✍️ Pràctica 1  
 ## Instal·lació i configuració d'Odoo
 
 ### Introducció
@@ -260,9 +260,9 @@ Després podràs usar:
 
 ### Pas 3: Primer accés al sistema
 
-1. Quan aparegui "Installation complete!", **reinicia** la VM
+1. Quan aparega "Installation complete!", **reinicia** la VM
 2. **Retira la ISO**: Configuració → Emmagatzematge → Retira el disc
-3. **Inicia la VM** i espera que aparegui el prompt de login
+3. **Inicia la VM** i espera que aparega el prompt de login
 4. **Fes login** amb l'usuari i contrasenya que has creat
 
 :::{admonition} Primer comandament important
@@ -506,7 +506,7 @@ Crea un document (Word, PDF o Markdown) que inclogui:
 :::{admonition} Consells per a la documentació
 :class: tip
 - **Captures nítides**: Usa Alt+Impr Pant per capturar finestres específiques
-- **Explica els passos**: No només diguis "he fet això", explica per què
+- **Explica els passos**: No només digues "he fet això", explica per què
 - **Inclou errors**: Els errors i com els has resolt són molt valuosos
 - **Revisa abans de lliurar**: Comprova que tot s'entén bé
 :::
@@ -576,9 +576,4 @@ sudo -u postgres psql -c "\l"
    ssh localhost
    ```
 
-
-```{toctree}
-:maxdepth: 1
-
-```
 

@@ -1,4 +1,4 @@
-# Part 2: Desplegament d'Odoo amb Docker
+# 📌 Part 2: Desplegament d'Odoo amb Docker
 
 Aquest document cobreix el desplegament complet d'Odoo 16 utilitzant contenidors Docker i Docker Compose. Aquesta metodologia moderna ofereix avantatges significatius en portabilitat, escalabilitat i gestió d'entorns, sent especialment valuosa per a desenvolupament ràpid i desplegaments professionals.
 
@@ -521,9 +521,9 @@ mkdir -p ~/odoo_server/scripts
 mkdir -p ~/odoo_server/backups/scripts
 
 # Copiar scripts des de la documentació
-cp docs/scripts/test-docker-installation.sh ~/odoo_server/scripts/
-cp docs/scripts/diagnostic.sh ~/odoo_server/scripts/
-cp docs/scripts/monitor.sh ~/odoo_server/scripts/
+cp test-docker-installation.sh ~/odoo_server/scripts/
+cp diagnostic.sh ~/odoo_server/scripts/
+cp monitor.sh ~/odoo_server/scripts/
 
 # Fer-los executables
 chmod +x ~/odoo_server/scripts/*.sh
@@ -595,8 +595,8 @@ Aquests scripts gestionen automàticament:
 **Instal·lació:**
 ```bash
 # Copiar scripts de backup
-cp docs/scripts/backup-docker.sh ~/odoo_server/backups/scripts/
-cp docs/scripts/restore-docker.sh ~/odoo_server/backups/scripts/
+cp backup-docker.sh ~/odoo_server/backups/scripts/
+cp restore-docker.sh ~/odoo_server/backups/scripts/
 chmod +x ~/odoo_server/backups/scripts/*.sh
 ```
 :::
@@ -807,9 +807,3 @@ Aquesta metodologia amb Docker et proporciona una base sòlida per desenvolupar,
 - **[Best practices per a Dockerfile](https://docs.docker.com/develop/dev-best-practices/)**
 
 Amb aquesta configuració professional de Docker, tens una plataforma robusta per qualsevol projecte Odoo! 🐳✨
-
-```{toctree}
-:maxdepth: 1
-
-```
-

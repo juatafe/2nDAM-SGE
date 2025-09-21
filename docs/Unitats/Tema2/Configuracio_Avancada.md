@@ -1430,9 +1430,3 @@ main() {
 
 main
 ```
-
-```{toctree}
-:maxdepth: 1
-
-```
-

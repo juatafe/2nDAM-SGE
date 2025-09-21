@@ -1,4 +1,4 @@
-# Part 1: Instal·lació tradicional d'Odoo en Ubuntu Server
+# 📌 Part 1: Instal·lació tradicional d'Odoo en Ubuntu Server
 
 Aquest document cobreix la instal·lació completa d'Odoo 16 utilitzant el mètode tradicional en Ubuntu Server. Aquest enfocament proporciona el màxim control sobre l'entorn i permet entendre profundament tots els components del sistema.
 
@@ -74,6 +74,7 @@ La instal·lació tradicional segueix aquests passos principals:
 
 **Temps estimat:** 45-90 minuts (depenent de l'experiència i velocitat de connexió)
 
+(1-preparació-del-sistema)=
 ## 1) Preparació del sistema
 
 ### Actualització completa del sistema
@@ -156,6 +157,7 @@ sudo apt-get install -y \
 - **gnupg**: Verificació de signatures GPG
 - **lsb-release**: Informació de la distribució Linux
 
+(2-usuari-de-servei)=
 ## 2) Usuari de servei
 
 ### Creació de l'usuari dedicat
@@ -225,6 +227,7 @@ sudo -u odoo ls -la /opt/odoo
 sudo -u odoo whoami
 ```
 
+(3-instal·lació-de-postgresql)=
 ## 3) Instal·lació de PostgreSQL
 
 ### Instal·lació del servidor de base de dades
@@ -305,6 +308,7 @@ sudo systemctl restart postgresql
 sudo systemctl status postgresql
 ```
 
+(4-descàrrega-i-configuració-dodoo)=
 ## 4) Descàrrega i configuració d'Odoo
 
 ### Descàrrega del codi font
@@ -381,7 +385,7 @@ sudo apt-get install -y \
 
 ### Creació de l'entorn virtual Python
 
-```bash
+```none
 # Crear i configurar entorn virtual
 sudo -u odoo -H bash -c '
     cd /opt/odoo
@@ -414,7 +418,7 @@ Els entorns virtuals Python proporcionen:
 
 El fitxer `/opt/odoo/odoo16/requirements.txt` conté dependències com:
 
-```txt
+```text
 Babel>=2.6.0               # Internacionalització
 chardet                    # Detecció de codificació de text
 cryptography               # Criptografia i certificates
@@ -458,6 +462,7 @@ which wkhtmltopdf
 - **Qualitat**: Proporciona millor qualitat que altres biblioteques Python
 - **Compatibilitat**: Versió específica requerida per compatibilitat amb Odoo
 
+(5-configuració-dodoo)=
 ## 5) Configuració d'Odoo
 
 ### Estructura de directoris
@@ -583,6 +588,7 @@ EOF
 - `create 0640 odoo odoo`: Crear nous logs amb permisos específics
 - `postrotate`: Recarregar el servei després de la rotació
 
+(6-servei-systemd)=
 ## 6) Servei systemd
 
 ### Creació del fitxer de servei
@@ -688,6 +694,7 @@ sudo systemctl disable odoo    # Desactivar inici automàtic
 sudo systemctl is-enabled odoo # Verificar si està activat
 ```
 
+(checklist-de-verificació-de-la-instal·lació)=
 ## Checklist de verificació de la instal·lació
 
 :::{admonition} ✅ Verificació completa del sistema
@@ -893,6 +900,7 @@ echo "   - Estat del servei: $(sudo systemctl is-active odoo)"
    - Configurar informació de l'empresa
    - Personalitzar la interfície
 
+(7-configuració-dapache-com-a-reverse-proxy-opcional)=
 ## 7) Configuració d'Apache com a reverse proxy (Opcional)
 
 Per a entorns de producció, és altament recomanable utilitzar Apache com a reverse proxy davant d'Odoo. Aquesta configuració proporciona beneficis significatius en seguretat, rendiment i gestió.
@@ -1139,9 +1147,3 @@ Durant aquest procés has après:
 5. **Documentar la configuració** específica del teu entorn
 
 Aquesta base sòlida et permet desenvolupar i mantenir un sistema Odoo professional en entorns de producció. 🎯
-
-
-```{toctree}
-:maxdepth: 1
-
-```

@@ -68,7 +68,7 @@ Imaginem que necessites afegir una nova funcionalitat al mòdul personalitzat "f
 
 #### **Flux tradicional (sense CI/CD):**
 
-```mermaid
+```{mermaid}
 graph TD
     A[Desenvolupador modifica codi] --> B[Commit local]
     B --> C[Tests manuals en local]
@@ -93,7 +93,7 @@ graph TD
 
 #### **Flux amb CI/CD (automatitzat):**
 
-```mermaid
+```{mermaid}
 graph TD
     A[Desenvolupador fa commit] --> B[🔍 CI: Tests automàtics]
     B --> C{Tests pass?}
@@ -116,7 +116,7 @@ graph TD
 
 ### Pipeline detallat per a Odoo
 
-```mermaid
+```{mermaid}
 graph LR
     subgraph "Desenvolupament"
         A[Git Commit] --> B[Trigger Pipeline]
@@ -861,10 +861,5 @@ groups:
 
 **Resum final**: CI/CD no és només una eina tècnica, és una transformació cultural que permet als equips d'Odoo ser més ràpids, fiables i innovadors. La inversió inicial es recupera ràpidament a través de l'eficiència operativa i la qualitat millorada del software. 🚀✨
 
----
 
-```{toctree}
-:maxdepth: 1
-
-```
 

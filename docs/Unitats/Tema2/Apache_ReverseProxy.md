@@ -633,7 +633,3 @@ La configuració d'Apache com a reverse proxy per a Odoo proporciona:
 
 Aquesta configuració és essencial per a qualsevol desplegament d'Odoo en producció que requereixi estàndards professionals de seguretat, rendiment i manteniment.
 
-```{toctree}
-:maxdepth: 1
-
-```
