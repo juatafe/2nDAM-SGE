@@ -11,7 +11,7 @@ Com a futur tècnic superior en Desenvolupament d'Aplicacions Multiplataforma, �
 :class: note
 Al final d'aquesta pràctica hauràs après a:
 
-- **Configurar una màquina virtual** amb Ubuntu Server 22.04 LTS
+- **Configurar una màquina virtual** amb Ubuntu Server 24.04 LTS
 - **Instal·lar i configurar un sistema ERP** (Odoo 16) en un entorn Linux
 - **Treballar amb la línia d'ordres** de Linux per a tasques d'administració
 - **Configurar xarxes virtuals** per permetre l'accés remot a serveis
