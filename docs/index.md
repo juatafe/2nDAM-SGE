@@ -38,6 +38,7 @@ Instal·lació d’Odoo, configuració i pràctiques amb Docker i serveis auxili
 self
 Unitats/Tema1/index
 Unitats/Tema2/index
+Unitats/Tema3/index
 ```
 
 
