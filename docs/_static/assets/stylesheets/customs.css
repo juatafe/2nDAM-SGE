@@ -1,5 +1,6 @@
 .card-icon {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
+  max-width: 100%;       /* mai sobrepassa l’amplada de la card */
+  height: auto;          /* proporció mantinguda */
+  display: block;
+  margin: 0 auto 0.5rem; /* centrat + separació amb el text */
 }
