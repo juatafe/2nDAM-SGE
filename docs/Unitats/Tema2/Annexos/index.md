@@ -6,6 +6,7 @@
 
 :::{card} Annex A · Reverse Proxy amb Apache
 :link: Apache_ReverseProxy
+:img-top: _static/assets/img/icons/annexA.png
 Configura Apache com a proxy invers per a Odoo.
 :::
 
@@ -29,7 +30,7 @@ Desplegament continu i pipelines per a Odoo.
 Millora el rendiment amb Redis per a sessions i cues.
 :::
 
-
+:::
 
 
 ```{toctree}

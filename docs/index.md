@@ -4,18 +4,21 @@ Apunts del curs **Sistemes de Gestió Empresarial (2n DAM)**.
 
 En aquest material trobaràs la teoria, exemples i pràctiques sobre la identificació, instal·lació i configuració de sistemes ERP-CRM amb especial atenció a **Odoo**.
 
-## 📚 Unitats
+## 📚 Temes
 
-:::{grid} 1 1 2 2
-:gutter: 2
+:::{grid} 1 1 1 1
+:gutter: 3
 
-:::{grid-item-card} 🏁 Unitat 1 · Introducció
+
+:::{grid-item-card} 🏁 Tema 1 · Introducció
 :link: Unitats/Tema1/index
+:img-top: _static/assets/img/icons/intro.png
 Conceptes bàsics d’ERP/CRM i primera presa de contacte amb Odoo.
 :::
 
-:::{grid-item-card} ⚙️ Unitat 2 · Desplegament i Configuració
+:::{grid-item-card} ⚙️ Tema 2 · Desplegament i Configuració
 :link: Unitats/Tema2/index
+:img-top: _static/assets/img/icons/docker.png
 Instal·lació d’Odoo, configuració i pràctiques amb Docker i serveis auxiliars.
 :::
 
@@ -26,7 +29,7 @@ Instal·lació d’Odoo, configuració i pràctiques amb Docker i serveis auxili
 
 ```{toctree}
 :maxdepth: 1
-:caption: Unitats
+:caption: Temes
 :hidden:
 
 
