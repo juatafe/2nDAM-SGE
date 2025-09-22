@@ -6,23 +6,25 @@ En aquest material trobaràs la teoria, exemples i pràctiques sobre la identifi
 
 ## 📚 Temes
 
-:::{grid} 1 1 1 1
+```{grid} 1 2 2 2
 :gutter: 3
 
 
 :::{grid-item-card} 🏁 Tema 1 · Introducció
 :link: Unitats/Tema1/index
 :img-top: _static/assets/img/icons/intro.png
+:class-img-top: card-icon
 Conceptes bàsics d’ERP/CRM i primera presa de contacte amb Odoo.
 :::
 
 :::{grid-item-card} ⚙️ Tema 2 · Desplegament i Configuració
 :link: Unitats/Tema2/index
 :img-top: _static/assets/img/icons/docker.png
+:class-img-top: card-icon
 Instal·lació d’Odoo, configuració i pràctiques amb Docker i serveis auxiliars.
 :::
 
-:::
+````
 
 
 
