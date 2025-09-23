@@ -225,5 +225,5 @@ Odoo podria donar suport al procés mitjançant un mòdul de gestió d’expedie
 
 :::{admonition} Exemple interactiu
 :class: tip
-Consulta l’exemple de flux al fitxer <a href="ResponsabilitatPatrimonial.html" target="_blank">Responsabilitat Patrimonial</a>.  
+Consulta l’exemple de flux al fitxer <a href="ResponsabilitatPatrimonial.html" target="_blank" rel="noopener noreferrer">ResponsabilitatPatrimonial</a>.
 :::
