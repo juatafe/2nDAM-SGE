@@ -24,8 +24,15 @@ Conceptes bàsics d’ERP/CRM i primera presa de contacte amb Odoo.
 Instal·lació d’Odoo, configuració i pràctiques amb Docker i serveis auxiliars.
 :::
 
-````
+:::{grid-item-card} 🏭 Tema 3 · Implantació ERP-CRM
+:link: Unitats/Tema3/index
+:img-top: _static/assets/img/icons/tema3index.png
+:class-img-top: card-icon
+Implantació d’Odoo en una empresa: interfície web, mòduls i configuració bàsica.
+:::
 
+
+````
 
 
 

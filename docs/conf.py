@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath("."))
 
 # ──────────────── Projecte ────────────────
 project = "Sistemes de Gestió Empresarial"
-author = "Juan Bautista Talens"
+author = "Juan Bautista Talens & Alicia González"
 language = "ca"
 
 # ----- i18n -----
