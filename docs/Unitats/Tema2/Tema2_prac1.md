@@ -295,10 +295,10 @@ sudo apt install -y postgresql postgresql-contrib
 
 # Instal·lar Python i dependències
 sudo apt install -y python3 python3-pip python3-dev python3-venv
-sudo apt install -y libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libldap2-dev pkg-config libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev
+sudo apt install -y libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libldap2-dev pkg-config libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev net-tools
 
 # Instal·lar dependències addicionals
-sudo apt install -y build-essential wget git gdebi-core fontconfig
+sudo apt install -y build-essential wget git gdebi-core fontconfig libpq-dev
 ```
 
 ### Pas 2: Configurar PostgreSQL
@@ -320,6 +320,7 @@ ALTER USER odoo PASSWORD 'odoo_password';
 ```{code-block} bash
 # Crear usuari del sistema
 sudo adduser --system --home=/opt/odoo --group odoo
+sudo passwd odoo
 ```
 
 ### Pas 4: Descarregar i instal·lar Odoo
@@ -334,10 +335,10 @@ git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 --single-bran
 
 # Crear entorn virtual de Python
 python3 -m venv odoo16-venv
-source odoo16-venv/bin/activate
+source /opt/odoo/odoo16-venv/bin/activate
 
 # Instal·lar dependències Python d'Odoo
-pip install wheel
+pip install wheel PyPDF2 psycopg2-binary
 pip install -r odoo16/requirements.txt
 
 # Sortir de l'usuari odoo
@@ -420,7 +421,7 @@ sudo systemctl status odoo
 ### Pas 1: Verificar que Odoo funciona
 
 ```{code-block} bash
-# Comprovar que el servei està actiu
+# Reiniciar i comprovar que el servei està actiu
 sudo systemctl status odoo
 
 # Comprovar que escolta al port 8069
