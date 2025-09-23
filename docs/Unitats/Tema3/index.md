@@ -182,17 +182,13 @@ Quan instal·lem el mòdul **Website**, Odoo llança un **assistent inicial** qu
 :class: tip
 Encara que l’assistent només apareix la primera vegada, hi ha diverses maneres de repetir-lo o simular-lo:
 
-1. **Canviar de tema**  
-   - Ves a **Webs > Configuració > Configuració**.  
-   - A la secció **Temes**, prem **Canviar de tema**.  
-   - S’obrirà un procés molt semblant al wizard inicial.
 
-2. **Crear una web nova**  
+1. **Crear una web nova**  
    - A partir d’Odoo 16 pots tindre més d’una web per base de dades.  
    - Menú: **Webs > Configuració > Webs > Crear**.  
    - En crear-ne una de nova, s’activa de nou l’assistent de selecció de tema.
 
-3. **Reinstal·lar el mòdul Website**  
+2. **Reinstal·lar el mòdul Website**  
    - Només recomanat en entorns de prova.  
    - Desinstal·lar i tornar a instal·lar el mòdul fa que el wizard es mostre com si fóra la primera vegada.  
    - ⚠️ Aquesta acció elimina també les pàgines i configuracions prèvies de la web.
@@ -200,7 +196,7 @@ Encara que l’assistent només apareix la primera vegada, hi ha diverses manere
 
 :::{admonition} Recomanació docent
 :class: warning
-Per a practicar a classe, és més segur **crear una web nova** o **canviar de tema**, en lloc de reinstal·lar el mòdul.  
+Per a practicar a classe, és més segur **crear una web nova**, en lloc de reinstal·lar el mòdul.  
 La reinstal·lació pot provocar pèrdua de dades i només és viable en una base de dades de proves.
 :::
 
