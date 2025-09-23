@@ -50,17 +50,48 @@ Per gestionar bases de dades (crear, duplicar o eliminar), cal accedir directame
 ```{code-block} bash
 http://localhost:8069/web/database/manager
 ```
+```{image} /_static/assets/img/Tema3/manager.png
+:alt: Gestió de les bases de dades
+:width: 100%
+:align: center
+```
 
 :::tip
-Aquesta opció és útil si necessites crear, duplicar o eliminar bases de dades sense entrar a Odoo com a usuari.
+Aquesta opció és útil si necessites crear, duplicar o eliminar bases de dades.
 :::
 :::
 
+### 2.1 Pantalla inicial “Discussió”
+
+Quan inicies sessió per primera vegada amb l’usuari **Administrador**, Odoo et mostra el mòdul **Discussió**.  
+Aquesta pantalla és la bústia d’entrada de notificacions i missatgeria interna entre usuaris.
+
+```{image} /_static/assets/img/Tema3/discussio.png
+:alt: Pantalla inicial Discussió
+:width: 100%
+:align: center
+```
+En aquesta interfície pots veure:
+
+  - *Bústia d’entrada, Destacat i Historial* → per gestionar els missatges.
+  - *Canals* (com el canal general), on participen diversos usuaris.
+  - *Missatges directes* (com OdooBot o altres usuaris individuals).
+  
+:::{note}
+OdooBot és un usuari virtual que apareix per defecte i que serveix per donar-te missatges d’ajuda, consells o notificacions internes del sistema.
+És útil per rebre recordatoris o proves, però no és un usuari real.
+:::
+A la part central apareixen els missatges rebuts. Si encara no hi ha activitat, la bústia es mostra buida.
+
+
 **Un cop dins d’Odoo:**  
-Després d’iniciar sessió (normalment com a administrador), veuràs el menú principal. Des d’aquí podràs:
-- Accedir a la configuració de l’empresa (**Configuració** > **Configuració General** > **Empreses**).
-- Instal·lar mòduls nous des del menú **Aplicacions**.
-- Gestionar les dades bàsiques i paràmetres generals.
+Per accedir a la resta d’aplicacions i configuracions, fes clic a la icona dels 9 quadrets (app switcher) situada a la part superior esquerra.
+Des d’allí veuràs el menú principal amb tots els mòduls disponibles i podràs:
+
+  - Accedir a la configuració de l’empresa **(Configuració > Configuració General > Empreses)**.
+  - Instal·lar mòduls nous des del menú **Aplicacions**.
+  - Gestionar dades bàsiques i paràmetres generals.
+
 
 ```{image} /_static/assets/img/Tema3/mycompany.png
 :alt: Administració d'Odoo
@@ -71,6 +102,7 @@ Després d’iniciar sessió (normalment com a administrador), veuràs el menú 
 Aquesta interfície web permet controlar totes les funcionalitats d’Odoo de manera centralitzada i intuïtiva.
 
 ---
+
 
 ## 3. Instal·lació de mòduls
 
@@ -129,6 +161,49 @@ Cal advertir que un **ajuntament no té la mateixa comptabilitat que una empresa
 Aquesta anàlisi i adaptació requereix una complexitat que s’escapa del propòsit del curs.  
 Per tant, treballarem amb el **pla comptable espanyol per a empreses** per simplificar els exemples.
 :::
+
+---
+### 4.1 Creació i reconfiguració del Website
+
+Quan instal·lem el mòdul **Website**, Odoo llança un **assistent inicial** que ens guia per a crear la web de l’empresa. Aquest *wizard* et permet:
+
+- Seleccionar un **tema visual** (plantilla).  
+- Triar colors i tipografia corporativa.  
+- Generar una primera pàgina editable amb el **Website Builder**.
+
+```{image} /_static/assets/img/Tema3/assitent.png
+:alt: Assistent de selecció de tema en Website
+:width: 100%
+:align: center
+```
+*Pantalla de l’assistent inicial per a seleccionar un tema i crear la web.*
+
+:::{admonition} Tornar a llançar el wizard
+:class: tip
+Encara que l’assistent només apareix la primera vegada, hi ha diverses maneres de repetir-lo o simular-lo:
+
+1. **Canviar de tema**  
+   - Ves a **Webs > Configuració > Configuració**.  
+   - A la secció **Temes**, prem **Canviar de tema**.  
+   - S’obrirà un procés molt semblant al wizard inicial.
+
+2. **Crear una web nova**  
+   - A partir d’Odoo 16 pots tindre més d’una web per base de dades.  
+   - Menú: **Webs > Configuració > Webs > Crear**.  
+   - En crear-ne una de nova, s’activa de nou l’assistent de selecció de tema.
+
+3. **Reinstal·lar el mòdul Website**  
+   - Només recomanat en entorns de prova.  
+   - Desinstal·lar i tornar a instal·lar el mòdul fa que el wizard es mostre com si fóra la primera vegada.  
+   - ⚠️ Aquesta acció elimina també les pàgines i configuracions prèvies de la web.
+:::
+
+:::{admonition} Recomanació docent
+:class: warning
+Per a practicar a classe, és més segur **crear una web nova** o **canviar de tema**, en lloc de reinstal·lar el mòdul.  
+La reinstal·lació pot provocar pèrdua de dades i només és viable en una base de dades de proves.
+:::
+
 
 ---
 
