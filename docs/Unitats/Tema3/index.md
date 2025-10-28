@@ -6,6 +6,7 @@
 :hidden:
 
 Practica_MailHog_Odoo
+explicascript
 ```
 
 ## 1. Context i objectius
