@@ -31,6 +31,13 @@ Instal·lació d’Odoo, configuració i pràctiques amb Docker i serveis auxili
 Implantació d’Odoo en una empresa: interfície web, mòduls i configuració bàsica.
 :::
 
+:::{grid-item-card} 🗂️ Tema 4 · Organització i consulta de la informació
+:link: Unitats/Tema4/index
+:img-top: _static/assets/img/icons/pgadmin.png
+:class-img-top: card-icon
+Accés a la base de dades d’Odoo amb pgAdmin. Consulta, gestió i anàlisi de la informació emmagatzemada en PostgreSQL.
+:::
+
 
 ````
 
@@ -46,6 +53,7 @@ self
 Unitats/Tema1/index
 Unitats/Tema2/index
 Unitats/Tema3/index
+Unitats/Tema4/index
 ```
 
 
