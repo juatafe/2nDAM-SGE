@@ -373,9 +373,11 @@ A VirtualBox:
 
 > 💡 Això permet que quan accedim a `http://127.0.0.1:8080` al nostre navegador, el trànsit es redirigisca al port `80` de la màquina virtual (10.0.2.15).
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/pgadmin-4.png" width="80%">
-</p>
+```{image} /_static/assets/img/Tema4/pgadmin-4.png
+:alt: pgadmin-4
+:width: 80%
+:align: center
+```
 
 ---
 
@@ -415,9 +417,11 @@ Això obrirà la interfície web de pgAdmin4, servida per la màquina virtual Ub
 
 ### 5️⃣ Connexió amb el contenidor de PostgreSQL
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/pgadminnuevo.png" width="80%">
-</p>
+```{image} /_static/assets/img/Tema4/pgadminnuevo.png
+:alt: pgadminnuevo
+:width: 80%
+:align: center
+```
 
 Una vegada dins de pgAdmin4, creem una nova connexió amb el servidor Docker:
 
@@ -430,9 +434,11 @@ Una vegada dins de pgAdmin4, creem una nova connexió amb el servidor Docker:
 Amb això, ja podem explorar la base de dades `cpa` creada per Odoo dins del contenidor PostgreSQL.
 
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/pgadminnuevoconfig.png" width="80%">
-</p>
+```{image} /_static/assets/img/Tema4/pgadminnuevoconfig.png
+:alt: pgadminnuevoconfig
+:width: 80%
+:align: center
+```
 
 ---
 ### 🧭 Interfície de pgAdmin4
@@ -459,9 +465,11 @@ Des de la pestanya **Tablero** (Dashboard), pgAdmin mostra informació en temps 
 - **Lectures i escriptures** de blocs de dades.  
 - **Insercions, actualitzacions i esborrats** recents.
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/pgadmintablero.png" width="100%">
-</p>
+```{image} /_static/assets/img/Tema4/pgadmintablero.png
+:alt: pgadmintablero
+:width: 100%
+:align: center
+```
 
 > 💡 Aquesta vista és molt útil per comprovar si Odoo està interactuant correctament amb la base de dades: cada vegada que un usuari inicia sessió o crea un registre, veuràs activitat al gràfic.
 
@@ -478,30 +486,38 @@ Des de la pestanya **Tablero** (Dashboard), pgAdmin mostra informació en temps 
 Una vegada connectats, veurem totes les bases de dades disponibles.  
 Seleccionem la que hem creat (per exemple, `cpa`) per explorar-ne les taules:
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img4-T4.png" width="100%">
-</p>
+```{image} /_static/assets/img/Tema4/img4-T4.png
+:alt: img4-T4
+:width: 100%
+:align: center
+```
 
 Odoo utilitza un esquema per a cada mòdul instal·lat:  
 - Les taules del mòdul *website* comencen per `website_`.  
 - Les del mòdul *sale* per `sale_`.  
 - Les del mòdul *crm* per `crm_`, etc.
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img5-T4.png" width="100%">
-</p>
+```{image} /_static/assets/img/Tema4/img5-T4.png
+:alt: img5-T4
+:width: 100%
+:align: center
+```
 
 Podem veure els **camps de cada taula**:
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img6-T4.png" width="100%">
-</p>
+```{image} /_static/assets/img/Tema4/img6-T4.png
+:alt: img6-T4
+:width: 100%
+:align: center
+```
 
 I també **consultar les dades** fent la consulta corresponent:
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img8-T4.png" width="100%">
-</p>
+```{image} /_static/assets/img/Tema4/img8-T4.png
+:alt: img8-T4
+:width: 100%
+:align: center
+```
 
 Així visualitzem, per exemple, els productes registrats a Odoo.
 
@@ -511,21 +527,27 @@ Així visualitzem, per exemple, els productes registrats a Odoo.
 
 També podem veure i modificar els usuaris existents des del menú lateral:
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img9_T4.png" width="25%">
-</p>
+```{image} /_static/assets/img/Tema4/img9_T4.png
+:alt: img9_T4
+:width: 25%
+:align: center
+```
 
 L’usuari per defecte amb el qual Odoo es connecta és **odoo**.
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img10_T4.png" width="70%">
-</p>
+```{image} /_static/assets/img/Tema4/img10_T4.png
+:alt: img10_T4
+:width: 70%
+:align: center
+```
 
 Des de *Propietats* podem revisar permisos i contrasenyes:
 
-<p align="center">
-  <img src="/_static/assets/img/Tema4/img11-T4.png" width="100%">
-</p>
+```{image} /_static/assets/img/Tema4/img11-T4.png
+:alt: img11-T4
+:width: 100%
+:align: center
+```
 
 ---
 
@@ -586,7 +608,7 @@ Amb tot això, ja pots **analitzar i comprendre les dades internes d’Odoo** ta
   - **DNS virtual:** 10.0.2.3  
 - Quan redirigeixes ports (p. ex. `127.0.0.1:5432 → 10.0.2.15:5432`), el trànsit que arriba a la VM **té origen 10.0.2.2**.  
 - Per això, si configures `pg_hba.conf` o `UFW` dins la VM, **té sentit permetre només 10.0.2.2**, ja que és el “pont” pel qual entra la connexió des del teu host.  
-- En canvi, al teu ordinador (host), mantín els serveis limitats a **127.0.0.1**. En xarxes bridged o de producció, ignora 10.0.2.2 i utilitza IPs reals o canals segurs (SSH, HTTPS).
+- En canvi, al teu ordinador (host), mantín els serveis limitats a **127.0.0.1**. En xarxes bridged o de producció, ignora 10.0.2.2 i utilitza IPs reals o canals segurs (SSH, HTTPS, IP whitelists).
 ```
 
 
