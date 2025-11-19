@@ -2,6 +2,8 @@ import os
 import sys
 import re
 sys.path.append(os.path.abspath("."))
+sys.path.append(os.path.abspath("./_ext"))
+
 
 # ──────────────── Projecte ────────────────
 project = "Sistemes de Gestió Empresarial"
@@ -20,6 +22,8 @@ extensions = [
     "sphinx.ext.imgconverter",
     "sphinx_design",
     "sphinxcontrib.mermaid",    # si el fas servir, deixa-ho; si no, comenta-ho
+    "diagrama_classe",
+    
 ]
 
 # (Opcional però recomanat per a HTML)
@@ -27,6 +31,9 @@ graphviz_output_format = "svg"
 graphviz_dot_args = ["-Gbgcolor=transparent"]
 
 myst_enable_extensions = ["colon_fence", "attrs_block", "deflist"]
+myst_fence_as_directive = ["classe-diagrama"]
+
+
 myst_heading_anchors = 3
 
 # ──────────────── HTML (triar tema ací) ────────────────
