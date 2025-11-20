@@ -356,18 +356,18 @@ Odoo incorpora un comandament que crea automàticament tota l’estructura d’u
 
 La sintaxi general és:
 ```bash
-./odoo-bin scaffold nom_modul /ruta/dels/moduls
+./odoo scaffold nom_modul /ruta/dels/moduls
 ```
 
 Si estàs treballant en Docker, cal entrar dins del contenidor on està Odoo abans d’executar scaffold.
 
 ```bash
-docker compose exec web bash
+docker compose exec -u root web bash
 ```
 Després, dins del contenidor, executar:
 
 ```bash
-./odoo-bin scaffold escola /mnt/extra-addons
+./odoo scaffold escola /mnt/extra-addons
 ```
 
 Açò genera automàticament tota l’estructura necessària.
