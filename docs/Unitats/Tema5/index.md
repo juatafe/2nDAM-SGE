@@ -368,6 +368,7 @@ Després, dins del contenidor, executar:
 
 ```bash
 ./odoo scaffold escola /mnt/extra-addons
+chown -R odoo:odoo /mnt/extra-addons/escola
 ```
 
 Açò genera automàticament tota l’estructura necessària.
@@ -393,6 +394,38 @@ en eixe cas sí que estaries escrivint dins del contenidor i es perdria tot quan
 ---
 
 ### 5.4 Creació manual d’un mòdul  
+Si treballes amb docker vas a experimentar un problema de permisos. Per poder crear amb el comando scaffold has de ser usuari root dins del contenidor, però els fitxers creats així pertanyen a root i després Odoo no pot llegir-los i cal canviar els permisos manualment. Tampoc podras editar-los des de fora del contenidor ja que el teu usuari no tindrà permisos. Una solució poc elegant es canviar els permisos després de crear el mòdul amb scaffold:
+```bash
+chown -R odoo:odoo /mnt/extra-addons/nom_modul
+``` 
+o donar permisos d’escriptura a tot el món:
+```bash
+chmod -R 777 /mnt/extra-addons/nom_modul
+```
+
+Però canviar el propietari seria per a no tocar més el mòdul fora del contenidor. L'altra, donar-li permisos a tot l’usuari (777), no és gens recomanable.
+
+La solució passa per modificar el usuari al docker-compose.yml i posar el mateix usuari que tens a l’ordinador (normalment el teu UID és 1000). Així els fitxers creats dins del contenidor pertanyen al teu usuari i pots editar-los des de fora sense problemes.
+
+```yaml 
+services:
+  web:
+    image: odoo:16.0
+    user: "${UID}:${GID}"
+    ...
+```
+
+i un fitxxer .env
+```bash
+UID=1000
+GID=1000
+```
+Després d’això, cal reiniciar el contenidor per aplicar els canvis
+```bash
+docker compose down
+docker compose up -d
+```
+
 Si prefereixes crear el mòdul manualment, els passos bàsics són:
 
 1. Crear carpeta nova dins d’`extra-addons`.
