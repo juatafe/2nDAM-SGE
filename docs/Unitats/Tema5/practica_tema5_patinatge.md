@@ -210,8 +210,8 @@ access_patinatge_entrenament,access_patinatge_entrenament,model_patinatge_entren
 
 1. Reiniciar Odoo  
 2. Instal·lar el mòdul  
-3. Buscar el model en **Mode Desenvolupador**  al menú tècnic
-4. Observar que nombra les vistes automàtiques *tree/form*
+3. Buscar el model i l'acció de finestra en **Mode Desenvolupador**  al menú tècnic
+4. Observar que nombra les vistes automàtiques *tree/form* a l'acció de finestra però al model no hi ha vistes XML definides.
 
 ::::{admonition} Nota
 :class: tip
