@@ -215,9 +215,7 @@ access_patinatge_entrenament,access_patinatge_entrenament,model_patinatge_entren
 
 ::::{admonition} Nota
 :class: tip
-Les vistes generades automàticament per Odoo són molt bàsiques i no estan optimitzades per a l’ús real. 
-
-Si no es crea un menú bàsic, no podrem visualitzar les vistes des de la interfície d’usuari. En el **Tema 6** aprendrem a crear vistes i menús XML personalitzats.
+Odoo genera vistes automàtiques a partir del model, però perquè es vegin cal, com a mínim, una acció de finestra; i la forma normal de llançar eixa acció és mitjançant un menú. Si no es crea un menú bàsic, no podrem visualitzar les vistes des de la interfície d’usuari. En el **Tema 6** aprendrem a crear vistes i menús XML personalitzats.
 ::::
 
 ---
