@@ -359,19 +359,35 @@ La sintaxi general és:
 ./odoo scaffold nom_modul /ruta/dels/moduls
 ```
 
-Si estàs treballant en Docker, cal entrar dins del contenidor on està Odoo abans d’executar scaffold.
+Si estàs treballant en Docker, cal entrar dins del contenidor on està Odoo abans d’executar scaffold. El tema de permisos pot resultar complicat, així que una forma senzilla és executar:
 
 ```bash
 docker compose exec -u root web bash
 ```
-Després, dins del contenidor, executar:
+Després, dins del contenidor, canviar els permisos en executar:
 
 ```bash
-./odoo scaffold escola /mnt/extra-addons
+/usr/bin/odoo scaffold escola /mnt/extra-addons
 chown -R odoo:odoo /mnt/extra-addons/escola
 ```
 
 Açò genera automàticament tota l’estructura necessària.
+
+:::{admonition} Sobre `scaffold` en entorns Docker
+:class: warning
+
+En molts entorns Docker, Odoo **no inclou el fitxer `odoo-bin` ni el codi font complet**, ja que està instal·lat com a paquet Python.  
+Això vol dir que **no es pot utilitzar l’ordre `scaffold` directament**. És possible que estiga en una ruta diferent, com `/usr/bin/odoo`, o que no estiga disponible.
+
+És possible descarregar una còpia del codi font d’Odoo dins del contenidor (com hem fet per a proves) i usar `odoo-bin` només per a crear l’estructura d’un mòdul.  
+Ara bé, **açò no sol compensar**:
+- El repositori d’Odoo ocupa **moltes gigues**.
+- Es carrega el contenidor amb fitxers que **no s’utilitzen en execució**.
+- Complica el manteniment i l’enteniment de l’entorn.
+
+Per això, en pràctica, **crear el mòdul a mà és igual de vàlid i molt més net**.  
+`scaffold` només genera carpetes i fitxers bàsics: no aporta cap funcionalitat extra.
+:::
 
 ::: {admonition} 🔧 Recordatori important si treballes amb Docker
 :class: warning
