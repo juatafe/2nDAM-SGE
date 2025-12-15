@@ -66,7 +66,6 @@ En el fitxer `views/patinatge_menus.xml`, cal afegir **dues accions de finestra 
 
 💡 *Pista:* el codi és molt semblant al de Patinadores; només canvien els noms i el `res_model`.
 
----
 
 ## 4. Crear les vistes per al model Grup
 
@@ -94,6 +93,25 @@ El formulari ha d’estar ben organitzat:
 
 💡 *Consell:* utilitza `<group>` i `<notebook>` com ja has fet amb Patinadores.
 
+
+### 👥 Resultat final – model Grup
+
+Vista de llistat (*tree*) de Grups:
+```{image} /_static/assets/img/Tema6/vista-grups.png
+:alt: Vista Grups
+:class: img-fluid
+:width: 80%
+:align: center
+```
+
+Vista de formulari (*form*) de Grup, amb pestanya de patinadores:
+```{image} /_static/assets/img/Tema6/vista-grup-form.png
+:alt: Vista Grup form
+:class: img-fluid
+:width: 80%
+:align: center
+```
+
 ---
 
 ## 5. Crear les vistes per al model Entrenament
@@ -120,6 +138,24 @@ El formulari ha d’incloure:
 - Dades bàsiques de l’entrenament,
 - El grup associat,
 - Una pestanya amb les patinadores participants (`patinadores_ids`).
+
+### 🏋️ Resultat final – model Entrenament
+
+Vista de llistat (*tree*) d’Entrenaments:
+```{image} /_static/assets/img/Tema6/vista-entrenaments.png
+:alt: Vista Entrenaments
+:class: img-fluid
+:width: 80%
+:align: center
+```
+
+Vista de formulari (*form*) d’Entrenament amb grup i patinadores:
+```{image} /_static/assets/img/Tema6/vista-entrenaments-form.png
+:alt: Vista Entrenament form
+:class: img-fluid
+:width: 80%
+:align: center
+```
 
 ---
 
