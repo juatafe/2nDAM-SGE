@@ -66,6 +66,14 @@ Desenvolupament web amb QWeb: modificació del portal, creació de rutes i contr
 Seguretat avançada: definició de grups, permisos de model (CSV) i regles de registre (Record Rules).
 :::
 
+
+:::{grid-item-card} 📈 Tema 9 · Comptabilitat amb Odoo Community i mòduls OCA
+:link: Unitats/Tema9/index
+:img-top: _static/assets/img/icons/plangeneralcontable1.png
+:class-img-top: card-icon
+Gestió financera: Pla General Comptable, configuració de diaris de banc, importació de contactes amb IBAN i gestió de remeses SEPA amb mòduls de l'OCA.
+:::
+
 ````
 
 
@@ -85,6 +93,8 @@ Unitats/Tema5/index
 Unitats/Tema6/index
 Unitats/Tema7/index
 Unitats/Tema8/index
+Unitats/Tema9/index
+
 ```
 
 
