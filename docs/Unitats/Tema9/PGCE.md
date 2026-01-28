@@ -1900,7 +1900,7 @@ Nota ràpida: ↑ puja/entra · ↓ baixa/ix. En 6xx/7xx reconeixes resultat; el
 
 ### 🧾 Conciliació bancària 
 Ara que ja tenim l'extracte bancari importat, el següent pas és conciliar els moviments amb les factures i pagaments registrats a Odoo.
-Però ens adonem que   ens faltava un mòdul `account_reconcile_oca` per a la conciliació bancària automàtica. El tenim descarregat sols cal anar a _Apps > Actualitza llista de mòduls_ i instal·lar-lo.
+Però ens adonem que ens faltava un mòdul `account_reconcile_oca` per a la conciliació bancària automàtica. El tenim descarregat sols cal anar a _Apps > Actualitza llista de mòduls_ i instal·lar-lo.
 :::{image} /_static/assets/img/Tema9/accountreconcile.png
 :alt: Conciliació bancària Odoo
 :class: center-img    

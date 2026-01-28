@@ -74,6 +74,13 @@ Seguretat avançada: definició de grups, permisos de model (CSV) i regles de re
 Gestió financera: Pla General Comptable, configuració de diaris de banc, importació de contactes amb IBAN i gestió de remeses SEPA amb mòduls de l'OCA.
 :::
 
+:::{grid-item-card} 🔌 Tema 10 · Odoo API XML-RPC
+:link: Unitats/Tema10/index
+:img-top: _static/assets/img/icons/api.png
+:class-img-top: card-icon
+Interacció amb Odoo des de programes externs utilitzant la seva API XML-RPC.
+:::
+
 ````
 
 
@@ -94,6 +101,7 @@ Unitats/Tema6/index
 Unitats/Tema7/index
 Unitats/Tema8/index
 Unitats/Tema9/index
+Unitats/Tema10/index
 
 ```
 
